@@ -7,7 +7,11 @@
         "watch-poll": "npm run watch -- --watch-poll",
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+	"pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix",
+	"release": "./node_modules/.bin/standard-version",
+	"changelog": "./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+	"test": "./node_modules/.bin/jest --watchAll --detectOpenHandles"
     },
     "devDependencies": {
         "@commitlint/cli": "^9.0.1",
@@ -30,5 +34,18 @@
         "sass": "^1.15.2",
         "sass-loader": "^8.0.0",
         "standard-version": "^8.0.0"
+    },
+    "husky": {
+	"hooks": {
+	      "pre-commit": "lint-staged",
+	      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+	}
+    },
+    "lint-staged": {
+        "*.js": [
+		"./node_modules/.bin/prettier --check --write --loglevel warn",
+		"./node_modules/.bin/eslint --fix --ignore-path .gitignore",
+	        "./node_modules/.bin/jest --findRelatedTests"
+	]
     }
 }
