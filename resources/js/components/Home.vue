@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="pyro">
+    <div class="pyro" :class="{active:!timer.isRunning}">
       <div class="before"></div>
       <div class="after"></div>
     </div>
@@ -23,7 +23,7 @@
       <div class="time-box">
         <div class="time">{{ prettierTime(timer.secs) }}</div>
         <div class="name">Seconds</div>
-      </div> 
+      </div>
     </div>
   </div>
 </template>
@@ -38,7 +38,8 @@ export default {
       days: 0,
       int: true,
       name: 'Timer',
-      interval: null
+      interval: null,
+      isRunning: false
     }
   }),
   methods: {
@@ -49,7 +50,8 @@ export default {
         days,
         hours,
         mins,
-        secs
+        secs,
+        isRunning: true
       }
 
       // Start tick
@@ -66,6 +68,7 @@ export default {
         this.reduceDays()
       } else {
         // Blink
+        this.timer.isRunning = false
         clearInterval(this.timer.interval)
         this.timer.interval = setInterval(this.blink, 400)
       }
@@ -98,7 +101,7 @@ export default {
     }
   },
   mounted () {
-    this.startTimer(0, 5, 0, 2)
+    this.startTimer(0, 0, 0, 10)
   }
 }
 </script>
@@ -198,20 +201,28 @@ export default {
   .pyro {
     width: 100vw;
     height: 100vh;
-  }
+    opacity: 0;
+    transition: opacity 1s ease;
 
-  .pyro > .before, .pyro > .after {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    box-shadow: $box-shadow2;
-    @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
-  }
+    &.active {
+      opacity: 1;
+      transition: opacity 1s ease;
       
-  .pyro > .after {
-    @include animation-delay((1.25s, 1.25s, 1.25s));
-    @include animation-duration((1.25s, 1.25s, 6.25s));
+      &>.before,
+      &> .after {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        box-shadow: $box-shadow2;
+        @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
+      }
+
+      &> .after {
+        @include animation-delay((1.25s, 1.25s, 1.25s));
+        @include animation-duration((1.25s, 1.25s, 6.25s));
+      }
+    }
   }
           
   @include keyframes(bang) {
