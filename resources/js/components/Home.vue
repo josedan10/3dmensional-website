@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import moment from 'moment-timezone'
+
 export default {
   data: () => ({
     timer: {
@@ -37,20 +39,17 @@ export default {
       hours: 0,
       days: 0,
       int: true,
-      name: 'Timer',
+      endDate: null,
       interval: null,
       isRunning: false
     }
   }),
   methods: {
-    startTimer: function (days, hours, mins, secs) {
+    startTimer: function (endDate) {
       // Set initial state of timer
       this.timer = {
         ...this.timer,
-        days,
-        hours,
-        mins,
-        secs,
+        endDate,
         isRunning: true
       }
 
@@ -58,14 +57,17 @@ export default {
       this.timer.interval = setInterval(this.tick, 1000)
     },
     tick: function () {
-      if (this.timer.secs !== 0) {
-        this.reduceSecs()
-      } else if (this.timer.mins > 0 && this.timer.secs === 0) {
-        this.reduceMins()
-      } else if (this.timer.hours > 0 && this.timer.mins === 0 && this.timer.secs === 0) {
-        this.reduceHours()
-      } else if (this.timer.days !== 0 && this.timer.hours === 0 && this.timer.mins === 0 && this.timer.secs === 0) {
-        this.reduceDays()
+      const now = moment().tz('America/Caracas')
+      const timeDiffSecs = this.timer.endDate.diff(now, 'secs')
+
+      if (timeDiffSecs > 0) {
+        this.timer = {
+          ...this.timer,
+          days: this.timer.endDate.diff(now, 'days'),
+          hours: this.timer.endDate.diff(now, 'hours') % 24,
+          mins: this.timer.endDate.diff(now, 'minutes') % 60,
+          secs: this.timer.endDate.diff(now, 'seconds') % 60
+        }
       } else {
         // Blink
         this.timer.isRunning = false
@@ -76,32 +78,10 @@ export default {
     blink: function () {
       this.timer.int = !this.timer.int
     },
-    prettierTime: (digit) => digit < 10 ? '0' + digit : digit,
-    reduceSecs: function () {
-      // Reduce secs
-      this.timer.secs -= 1
-    },
-    reduceMins: function () {
-      // Reduce mins
-      this.timer.mins -= 1
-      this.timer.secs = 59
-    },
-    reduceHours: function () {
-      // Reduce hours
-      this.timer.hours -= 1
-      this.timer.mins = 59
-      this.timer.secs = 59
-    },
-    reduceDays: function () {
-      // Reduce days
-      this.timer.days -= 1
-      this.timer.hours = 23
-      this.timer.mins = 59
-      this.timer.secs = 59
-    }
+    prettierTime: (digit) => digit < 10 ? '0' + digit : digit
   },
   mounted () {
-    this.startTimer(0, 0, 0, 10)
+    this.startTimer(moment('2020-08-01 10:00:00').tz('America/Caracas'))
   }
 }
 </script>
@@ -115,7 +95,7 @@ export default {
     align-items: center;
     position: relative;
     overflow: hidden;
- 
+
     .timer {
       display: flex;
       font-size: 40px;
@@ -207,7 +187,7 @@ export default {
     &.active {
       opacity: 1;
       transition: opacity 1s ease;
-      
+
       &>.before,
       &> .after {
         position: absolute;
@@ -224,20 +204,20 @@ export default {
       }
     }
   }
-          
+
   @include keyframes(bang) {
     to {
       box-shadow:$box-shadow;
     }
   }
-      
+
   @include keyframes(gravity)  {
     to {
       @include transform(translateY(200px));
       opacity: 0;
     }
   }
-      
+
   @include keyframes(position) {
     0%, 19.9% {
       margin-top: 10%;
@@ -247,15 +227,15 @@ export default {
       margin-top: 40%;
       margin-left: 30%;
     }
-    40%, 59.9% {  
+    40%, 59.9% {
       margin-top: 20%;
       margin-left: 70%
     }
-    60%, 79.9% {  
+    60%, 79.9% {
       margin-top: 30%;
       margin-left: 20%;
     }
-    80%, 99.9% {  
+    80%, 99.9% {
       margin-top: 30%;
       margin-left: 80%;
     }
