@@ -81,7 +81,7 @@ export default {
     prettierTime: (digit) => digit < 10 ? '0' + digit : digit
   },
   mounted () {
-    this.startTimer(moment('2020-08-01 10:00:00').tz('America/Caracas'))
+    this.startTimer(moment('2020-08-10 20:00').tz('America/Caracas'))
   }
 }
 </script>
@@ -101,6 +101,7 @@ export default {
       font-size: 40px;
       position: absolute;
       margin: auto;
+      margin-top: 200px;
 
       .time-box {
         margin: 0 10px;
@@ -108,6 +109,11 @@ export default {
         .name {
           font-size: 20px;
         }
+      }
+
+      @media (max-width: 576px) {
+        margin-top: 0;
+        bottom: 20px;
       }
     }
   }
