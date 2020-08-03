@@ -12,7 +12,3 @@ npm-debug.log
 yarn-error.log
 *~
 ./..*
-
-/public/css/app.css
-/public/css/app-vuetify.css
-/public/js/app.js
