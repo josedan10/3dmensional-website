@@ -24,6 +24,10 @@ require('./plugins.js')
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('loader-component', require('./components/Loader.vue').default)
+Vue.component(
+  'projects-component',
+  require('./components/Projects.vue').default
+)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

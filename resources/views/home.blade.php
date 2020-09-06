@@ -37,56 +37,13 @@
             overflow: hidden;
         }
 
-        main {
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-
-        #app {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-
-        .animation {
-            background-color:#fff;
-            width:100%;
-            height:100%;
-            display:block;
-            overflow: hidden;
-            transform: translate3d(0,0,0);
-            text-align: center;
-            opacity: 1;
-        }
-
-        .animation-mob {
-            display: none;
-        }
-
-        @media (max-width: 576px) {
-            .animation-mob {
-                display: block;
-            }
-
-            .animation-mob svg {
-                height: auto !important;
-                width: 100% !important;
-            }
-
-            .animation {
-                display: none;
-            }
-        }
-
     </style>
 </head>
 <body>
 
     <main>
         <div id="app" class="content">
-            <loader-component></loader-component>
+            <projects-component></projects-component>
         </div>
     </main>
 </body>
