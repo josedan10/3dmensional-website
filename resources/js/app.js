@@ -28,6 +28,10 @@ Vue.component(
   'projects-component',
   require('./components/Projects.vue').default
 )
+Vue.component(
+  'services-component',
+  require('./components/Services.vue').default
+)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

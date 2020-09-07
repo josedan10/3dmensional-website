@@ -63,7 +63,7 @@ export default {
         img: '/images/projects/byNikoleMendoza-min.png',
         imgAlt: 'byNikoleMendoza, makeup, lifestyle, brand, influencer, maquillaje, estilo de vida',
         sub_categories: ['Branding', 'Photographic', 'Influencer'],
-        categories: ['Marketing', 'Design']
+        categories: ['Marketing', 'Diseño']
       },
       {
         id: 2,
@@ -74,7 +74,7 @@ export default {
         img: '/images/projects/elion-min.png',
         imgAlt: 'Elion, fitness, athletic, elite, influencer, atleta elite',
         sub_categories: ['Branding', 'Photographic', 'Influencer'],
-        categories: ['Marketing', 'Design']
+        categories: ['Marketing', 'Diseño']
       },
       {
         id: 3,
@@ -87,12 +87,12 @@ export default {
         img: '/images/projects/heavensSweet-min.png',
         imgAlt: 'Heaven\'s Sweet, desserts, cakes, bread, postres artesanales, pasteles, tortas, dulces',
         sub_categories: ['Branding'],
-        categories: ['Design']
+        categories: ['Diseño']
       }
     ],
     activeProject: null,
     showData: true,
-    categories: ['Design', 'Development', 'Marketing', 'All'],
+    categories: ['Diseño', 'Desarrollo', 'Marketing', 'Todos'],
     activeFilterIndx: 3
   }),
   methods: {

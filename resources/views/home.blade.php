@@ -43,7 +43,7 @@
 
     <main>
         <div id="app" class="content">
-            <projects-component></projects-component>
+            <services-component></services-component>
         </div>
     </main>
 </body>
