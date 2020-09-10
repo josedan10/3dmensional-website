@@ -32,6 +32,14 @@ Vue.component(
   'contacts-component',
   require('./components/Contacts.vue').default
 )
+Vue.component(
+  'absolute-component',
+  require('./components/Absolute.vue').default
+)
+Vue.component(
+  'watermark-component',
+  require('./components/Watermarks.vue').default
+)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

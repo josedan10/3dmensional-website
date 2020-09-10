@@ -1,9 +1,12 @@
 <template>
     <div class="d-flex justify-content-between container-fluid flex-wrap all relative">
-        <div class="head mb-5">
-            <img src="/images/svgs/3dmensional-logo.svg" alt="">
+        <div class="header mb-5">
+            <!-- <img src="/images/svgs/3dmensional-logo.svg" alt=""> -->
         </div>
-        <div class="container ko mt-4 d-flex flex-column justify-content-between">
+        <!-- <img class="absolute bars" src="/images/svgs/bars.svg" alt="">
+        <p class="text-black text-900 absolute language">EN</p> -->
+        <absolute-component></absolute-component>
+        <div class="container ko mt-4 d-flex flex-column justify-content-between relative">
             <h2 class="pl-5 ml-5 mb-4 text-black text-900">CONTACTS</h2>
             <div class="mt-4 d-flex flex-row">
                 <p class="w-50 text-black">EMAIL</p>
@@ -27,18 +30,21 @@
                     </div>
                 </div>
                 <div id="twitter" class="rrss d-flex flex-column justify-content-around align-items-center">
-                    <img src="/images/svgs/twitter-c.svg" alt="">
-                    <p class="text-light">3DMENSIONAL</p>
+                    <div class="w-100 h-100 d-flex flex-column justify-content-around align-items-center">
+                        <img src="/images/svgs/twitter-c.svg" alt="">
+                        <p class="text-light">3DMENSIONAL</p>
+                    </div>
                 </div>
                 <div id="whatsapp" class="rrss d-flex flex-column justify-content-around align-items-center">
-                    <img src="/images/svgs/whatsapp-c.svg" alt="">
-                    <p class="text-light">3DMENSIONAL</p>
+                    <div class="w-100 h-100 d-flex flex-column justify-content-around align-items-center">
+                        <img src="/images/svgs/whatsapp-c.svg" alt="">
+                        <p class="text-light">3DMENSIONAL</p>
+                    </div>
                 </div>
             </div>
+            <watermark-component class="water-1"></watermark-component>
         </div>
-        <img class="absolute bars" src="/images/svgs/bars.svg" alt="">
-        <p class="text-black text-900 absolute language">EN</p>
-        
+        <watermark-component class="water-2"></watermark-component>
     </div>
 </template>
 <style lang="scss">
@@ -50,13 +56,10 @@
     html, body{
         overflow: hidden;
     }
-    .head{
+    .header{
         height:50px;
+        width: 100%;
         margin-top: 20px;
-        img{
-            width: auto;
-            height:100%;
-        }
     }
     .relative{
         position: relative;
@@ -64,22 +67,19 @@
     .absolute{
         position: absolute;
     }
-    .bars{
-        top: 0;
-        right: 0;
-        height: 40px;
-        margin-top: 20px;
-        padding-right: 15px;
-    }
-    .language{
-        bottom: 0;
-        margin-bottom: 20px;
-    }
     .ko{
         height: calc((100% - 70px) - (4.5rem));
+        .water-1{
+            right: 90px;
+            top: 100px;
+        }
     }
     .all{
         height: 100vh;
+        .water-2{
+            right: -240px;
+            bottom: 50px;
+        }
     }
     p{
         margin: 0;
@@ -88,18 +88,22 @@
         height: 320px;
         width: 25%;
         background: #2A2D34;
-        border-radius: 20px 20px 0px 0px;
-        transition: all 0.3s;
-        img{
-            height: 60px;
+        border-radius: 10px 10px 0px 0px;
+        transition: all 0.2s;
+        .d-flex{
+            transition: all 0.2s;
+            img{
+                height: 60px;
+            }
         }
+        z-index: 2;
+        transform-origin: bottom;
     }
     .rrss:hover{
-        transform: scaleY(1.2);
-        transform-origin: bottom center;
+        transform: scale(1,1.2);
     }
     .rrss:hover .d-flex{
-        transform: scaleY(calc(1/1.2));
+        transform: scale(1,calc(1/1.13));
     }
     #instagram:hover{
         background-color: $instagram;

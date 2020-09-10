@@ -1,9 +1,7 @@
 <template>
-    <div class="d-flex justify-content-between container-fluid flex-wrap">
-        <div class="cont-logo col-xs-12 col-sm-12 col-md-4 col-lg-4  d-flex flex-column justify-content-between">
-            <div class="head">
-                <img src="/images/svgs/3dmensional-logo.svg" alt="">
-            </div>
+    <div class="d-flex justify-content-center container-fluid flex-wrap relative">
+        <absolute-component></absolute-component>
+        <div class="cont-logo col-xs-12 col-sm-12 col-md-4 col-lg-4  d-flex flex-column justify-content-center">
             <div class="content d-flex flex-column align-items-center">
                 <p class="text-black text-900 f-50">SERVICES</p>
                 <div class="logo" >
@@ -11,11 +9,7 @@
                     <p  class="text-center text-900 mt-2">CLICK</p>
                 </div>
             </div>
-            <div class="foot ">
-                <p style="margin:0px !important; position:absolute; bottom:0;" class="text-black text-900 pointer">EN</p>
-            </div>
         </div>
-
         <!-- DESCTRIPTION CONTAINER (Main description and hidden description) -->
         <div class="cont-description d-flex col-sm-12 col-md-5 col-lg-4">
             <!-- Main Description -->
@@ -74,173 +68,76 @@
                     <p>Diseño editorial.</p>
                 </div>
             </div>
-            <!-- <div v-if="show" class="application gradient show blue col-sm-6 col-md-9 col-lg-10 d-flex flex-column align-items-end pt-4 pr-2" id="showed">
-                <div class="d-flex flex-column align-items-start col-sm-7 col-md-7 text-light">
-                    <p>Desarrollo Web.</p>
-                    <p>Apps.</p>
-                    <p>Softwares.</p>
-                    <p>Multiplataformas.</p>
-                    <p>Sistemas de administración.</p>
-                    <p>Mantenimiento de plataformas</p>
-                    <p>Desarrollo e implemetación de base de datos.</p>
-                    <p>Administración de servidores.</p>
-                    <p>eComerce</p>
-                    <p>Sistema de educación online.</p>
-                </div>
-                
-            </div> -->
         </div>
-        <!-- <div v-if="color == 'yellow' " class="cont-description d-flex col-sm-12 col-md-5 col-lg-4">
-            <div class="description gradient col-sm-8 col-md-12 col-lg-12 yellow px-5">
-                <h3 class="mt-5 text-light text-900">DESIGN </h3>
-                <p class="text-light mt-4 mb-0" style="height: 80%;">Today, companies need technology services tools to reach their customers. Sell their products, manage projects and otimize your business processes.<br>Our team offers comprehensive solutions and digital innovation of any type of proposal with a combination of extensive knowledge and experience in the sector. Where we design and develop customized managment aplications based on the need, interests, comercial activities, human resources, process control and development of custom software. We carry out technological projects adapted to each company or business idea. We analyze each project idea in detail and provide the best solution based on the objetives and needs of our clients.</p>
-                <div class="pointer d-flex flex-column align-items-end" @click="showhide()">
-                    <p class="text-light text-900 m-0">MORE</p>
-                    <div class="more"></div>
-                </div>
-            </div>
-            <div class="application gradient hidden yellow col-sm-6 col-md-9 col-lg-10 d-flex flex-column align-items-end pt-4 pr-2" id="showed">
-                <div class="d-flex flex-column align-items-start col-sm-7 col-md-7 text-light">
-                    <p>Desarrollo Web.</p>
-                    <p>Apps.</p>
-                    <p>Softwares.</p>
-                    <p>Multiplataformas.</p>
-                    <p>Sistemas de administración.</p>
-                    <p>Mantenimiento de plataformas</p>
-                    <p>Desarrollo e implemetación de base de datos.</p>
-                    <p>Administración de servidores.</p>
-                    <p>eComerce</p>
-                    <p>Sistema de educación online.</p>
-                </div>
-            </div>
-            <div v-if="show" class="application gradient show yellow col-sm-6 col-md-9 col-lg-10 d-flex flex-column align-items-end pt-4 pr-2" id="showed">
-                <div class="d-flex flex-column align-items-start col-sm-7 col-md-7 text-light">
-                    <p>Desarrollo Web.</p>
-                    <p>Apps.</p>
-                    <p>Softwares.</p>
-                    <p>Multiplataformas.</p>
-                    <p>Sistemas de administración.</p>
-                    <p>Mantenimiento de plataformas</p>
-                    <p>Desarrollo e implemetación de base de datos.</p>
-                    <p>Administración de servidores.</p>
-                    <p>eComerce</p>
-                    <p>Sistema de educación online.</p>
-                </div>
-                
-            </div>
-        </div> -->
-        <!-- <div v-if="color == 'red' " class="cont-description d-flex col-sm-12 col-md-5 col-lg-4">
-            <div class="description gradient col-sm-8 col-md-12 col-lg-12 red px-5">
-                <h3 class="mt-5 text-light text-900">LEAD</h3>
-                <p class="text-light mt-4 mb-0" style="height: 80%;">Today, companies need technology services tools to reach their customers. Sell their products, manage projects and otimize your business processes.<br>Our team offers comprehensive solutions and digital innovation of any type of proposal with a combination of extensive knowledge and experience in the sector. Where we design and develop customized managment aplications based on the need, interests, comercial activities, human resources, process control and development of custom software. We carry out technological projects adapted to each company or business idea. We analyze each project idea in detail and provide the best solution based on the objetives and needs of our clients.</p>
-                <div class="pointer d-flex flex-column align-items-end" @click="showhide()">
-                    <p class="text-light text-900 m-0">MORE</p>
-                    <div class="more"></div>
-                </div>
-            </div>     
-            <div v-if="!show" class="application gradient hidden red col-sm-6 col-md-9 col-lg-10 d-flex flex-column align-items-end pt-4 pr-2" id="showed">
-                <div class="d-flex flex-column align-items-start col-sm-7 col-md-7 text-light">
-                    <p>Desarrollo Web.</p>
-                    <p>Apps.</p>
-                    <p>Softwares.</p>
-                    <p>Multiplataformas.</p>
-                    <p>Sistemas de administración.</p>
-                    <p>Mantenimiento de plataformas</p>
-                    <p>Desarrollo e implemetación de base de datos.</p>
-                    <p>Administración de servidores.</p>
-                    <p>eComerce</p>
-                    <p>Sistema de educación online.</p>
-                </div>
-                
-            </div>
-            <div v-if="show" class="application gradient show red col-sm-6 col-md-9 col-lg-10 d-flex flex-column align-items-end pt-4 pr-2" id="showed">
-                <div class="d-flex flex-column align-items-start col-sm-7 col-md-7 text-light">
-                    <p>Desarrollo Web.</p>
-                    <p>Apps.</p>
-                    <p>Softwares.</p>
-                    <p>Multiplataformas.</p>
-                    <p>Sistemas de administración.</p>
-                    <p>Mantenimiento de plataformas</p>
-                    <p>Desarrollo e implemetación de base de datos.</p>
-                    <p>Administración de servidores.</p>
-                    <p>eComerce</p>
-                    <p>Sistema de educación online.</p>
-                </div>
-                
-            </div>
-        </div> -->
-        <div class="cont-figure col-md-3 col-lg-4 d-flex flex-column justify-content-between">
-            <div class="head d-flex justify-content-end">
-                <img class="mr-2" src="/images/svgs/bars.svg" alt="">
-            </div>
+        <div class="cont-figure col-md-3 col-lg-4 d-flex flex-column justify-content-center">
             <div class="content d-flex flex-column align-items-center">
                 <img v-if="color =='blue' " src="/images/svgs/square.svg" alt="">
                 <img v-if="color =='yellow' " src="/images/bars.png" alt="">
                 <img v-if="color =='red' " src="/images/bars.png" alt="">
             </div>
-            <div class="foot d-flex flex-row justify-content-end">
+            <!-- <div class="foot d-flex flex-row justify-content-end">
                 <a href=""><img src="/images/svgs/instagram.svg" alt=""></a>
                 <a href=""><img src="/images/svgs/facebook.svg" alt=""></a>
                 <a href=""><img src="/images/svgs/twitter.svg" alt=""></a>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
 <script>
-export default {
-  data: () => ({
-      show: false,
-      color: 'blue',
-      count:1
-  }),
-  methods: {
-    showhide(){
-        var element = document.getElementById("showed");
-        this.show = !this.show;
-        if (this.show){
-            element.classList.add("show");
-            element.classList.remove("hidden")
-        }
-        if (!this.show){
-            element.classList.add("hidden");
-            element.classList.remove("show");
-        }
-        // console.log(this.show);
-    },
-    changeColor(){
-        this.count++;
-        var description = document.getElementById("description");
-        var element = document.getElementById("showed")
+    export default {
+    data: () => ({
+        show: false,
+        color: 'blue',
+        count:1
+    }),
+    methods: {
+        showhide(){
+            var element = document.getElementById("showed");
+            this.show = !this.show;
+            if (this.show){
+                element.classList.add("show");
+                element.classList.remove("hidden")
+            }
+            if (!this.show){
+                element.classList.add("hidden");
+                element.classList.remove("show");
+            }
+            // console.log(this.show);
+        },
+        changeColor(){
+            this.count++;
+            var description = document.getElementById("description");
+            var element = document.getElementById("showed")
 
-        if (this.count > 3){
-            this.count = 1;
+            if (this.count > 3){
+                this.count = 1;
+            }
+            if (this.count == 1){
+                this.color = 'blue';
+                description.classList.remove("red");
+                element.classList.remove("red");
+                description.classList.add("blue");
+                element.classList.add("blue");
+            }
+            if (this.count == 2){
+                this.color = 'yellow';
+                description.classList.remove("blue");
+                element.classList.remove("blue");
+                description.classList.add("yellow");
+                element.classList.add("yellow");
+            }
+            if (this.count == 3){
+                this.color = 'red';
+                description.classList.remove("yellow");
+                element.classList.remove("yellow");
+                description.classList.add("red");
+                element.classList.add("red");
+            }
+            // console.log(this.count);
         }
-        if (this.count == 1){
-            this.color = 'blue';
-            description.classList.remove("red");
-            element.classList.remove("red");
-            description.classList.add("blue");
-            element.classList.add("blue");
-        }
-        if (this.count == 2){
-            this.color = 'yellow';
-            description.classList.remove("blue");
-            element.classList.remove("blue");
-            description.classList.add("yellow");
-            element.classList.add("yellow");
-        }
-        if (this.count == 3){
-            this.color = 'red';
-            description.classList.remove("yellow");
-            element.classList.remove("yellow");
-            description.classList.add("red");
-            element.classList.add("red");
-        }
-        // console.log(this.count);
+    },
+    mounted () {
     }
-  },
-  mounted () {
-  }
 }
 </script>
 <style lang="scss">
@@ -324,6 +221,9 @@ $red-gradient: linear-gradient(to right, #9E0031,#780025);
             border-radius: 0px 0px 15px 15px;
             height:93%;
             transition: all 0.5s;
+            p{
+                margin-bottom: 0.5rem;
+            }
         }
     }
     .more{
@@ -331,6 +231,9 @@ $red-gradient: linear-gradient(to right, #9E0031,#780025);
         width: 22px;
         background:white;
         border-radius: 0px 3px 3px 0px;
+    }
+    .relative{
+        position: relative;
     }
     .gradient{
         // background-image: var(--gradient);
