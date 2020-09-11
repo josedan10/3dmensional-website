@@ -98,7 +98,7 @@
 
     <main>
         <div id="app" class="content">
-            <contacts-component></contacts-component>
+            <about-component></about-component>
         </div>
     </main>
 </body>

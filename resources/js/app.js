@@ -40,6 +40,7 @@ Vue.component(
   'watermark-component',
   require('./components/Watermarks.vue').default
 )
+Vue.component('about-component', require('./components/About.vue').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

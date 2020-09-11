@@ -1,10 +1,6 @@
 <template>
     <div class="d-flex justify-content-between container-fluid flex-wrap all relative">
-        <div class="header mb-5">
-            <!-- <img src="/images/svgs/3dmensional-logo.svg" alt=""> -->
-        </div>
-        <!-- <img class="absolute bars" src="/images/svgs/bars.svg" alt="">
-        <p class="text-black text-900 absolute language">EN</p> -->
+        <div class="header mb-5"></div>
         <absolute-component></absolute-component>
         <div class="container ko mt-4 d-flex flex-column justify-content-between relative">
             <h2 class="pl-5 ml-5 mb-4 text-black text-900">CONTACTS</h2>

@@ -27,6 +27,7 @@
         margin-bottom: 20px;
         margin-left: 15px;
         cursor: pointer;
+        z-index: 5;
     }
     .head{
         height:50px;
@@ -34,6 +35,7 @@
         left: 0;
         margin-top: 20px;
         margin-left: 15px;
+
         img{
             width: auto;
             height:100%;
