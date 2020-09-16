@@ -24,6 +24,23 @@ require('./plugins.js')
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('loader-component', require('./components/Loader.vue').default)
+Vue.component(
+  'services-component',
+  require('./components/Services.vue').default
+)
+Vue.component(
+  'contacts-component',
+  require('./components/Contacts.vue').default
+)
+Vue.component(
+  'absolute-component',
+  require('./components/Absolute.vue').default
+)
+Vue.component(
+  'watermark-component',
+  require('./components/Watermarks.vue').default
+)
+Vue.component('about-component', require('./components/About.vue').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

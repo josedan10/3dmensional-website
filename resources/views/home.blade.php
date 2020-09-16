@@ -29,12 +29,21 @@
             height: 100vh;
             margin: 0;
         }
+        .text-black{
+            color: #000;
+        }
+        .text-900{   
+            font-weight: 900;
+        }
+        .f-50{
+            font-size: 2.3rem;
+        }
 
         body{
             background-color:#fff;
             margin: 0px;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         main {
@@ -48,6 +57,9 @@
             top: 0;
             left: 0;
             z-index: 1;
+        }
+        .content{
+            width:100%;
         }
 
         .animation {
@@ -86,7 +98,7 @@
 
     <main>
         <div id="app" class="content">
-            <loader-component></loader-component>
+            <about-component></about-component>
         </div>
     </main>
 </body>
