@@ -29,12 +29,67 @@
             height: 100vh;
             margin: 0;
         }
+        .text-black{
+            color: #000;
+        }
+        .text-900{   
+            font-weight: 900;
+        }
+        .f-50{
+            font-size: 2.3rem;
+        }
 
         body{
             background-color:#fff;
             margin: 0px;
             height: 100%;
+            overflow-x: hidden;
+        }
+
+        main {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        #app {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .content{
+            width:100%;
+        }
+
+        .animation {
+            background-color:#fff;
+            width:100%;
+            height:100%;
+            display:block;
             overflow: hidden;
+            transform: translate3d(0,0,0);
+            text-align: center;
+            opacity: 1;
+        }
+
+        .animation-mob {
+            display: none;
+        }
+
+        @media (max-width: 576px) {
+            .animation-mob {
+                display: block;
+            }
+
+            .animation-mob svg {
+                height: auto !important;
+                width: 100% !important;
+            }
+
+            .animation {
+                display: none;
+            }
         }
 
     </style>
@@ -43,7 +98,7 @@
 
     <main>
         <div id="app" class="content">
-            <services-component></services-component>
+            <about-component></about-component>
         </div>
     </main>
 </body>
