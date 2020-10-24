@@ -2135,6 +2135,292 @@
         /***/
       },
 
+    /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Contacts.vue?vue&type=script&lang=js&":
+      /*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Contacts.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        "use strict"
+        __webpack_require__.r(__webpack_exports__)
+        function _createForOfIteratorHelper(o, allowArrayLike) {
+          var it
+          if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {
+            if (
+              Array.isArray(o) ||
+              (it = _unsupportedIterableToArray(o)) ||
+              (allowArrayLike && o && typeof o.length === "number")
+            ) {
+              if (it) o = it
+              var i = 0
+              var F = function F() {}
+              return {
+                s: F,
+                n: function n() {
+                  if (i >= o.length) return { done: true }
+                  return { done: false, value: o[i++] }
+                },
+                e: function e(_e) {
+                  throw _e
+                },
+                f: F,
+              }
+            }
+            throw new TypeError(
+              "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            )
+          }
+          var normalCompletion = true,
+            didErr = false,
+            err
+          return {
+            s: function s() {
+              it = o[Symbol.iterator]()
+            },
+            n: function n() {
+              var step = it.next()
+              normalCompletion = step.done
+              return step
+            },
+            e: function e(_e2) {
+              didErr = true
+              err = _e2
+            },
+            f: function f() {
+              try {
+                if (!normalCompletion && it["return"] != null) it["return"]()
+              } finally {
+                if (didErr) throw err
+              }
+            },
+          }
+        }
+
+        function _unsupportedIterableToArray(o, minLen) {
+          if (!o) return
+          if (typeof o === "string") return _arrayLikeToArray(o, minLen)
+          var n = Object.prototype.toString.call(o).slice(8, -1)
+          if (n === "Object" && o.constructor) n = o.constructor.name
+          if (n === "Map" || n === "Set") return Array.from(o)
+          if (
+            n === "Arguments" ||
+            /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+          )
+            return _arrayLikeToArray(o, minLen)
+        }
+
+        function _arrayLikeToArray(arr, len) {
+          if (len == null || len > arr.length) len = arr.length
+          for (var i = 0, arr2 = new Array(len); i < len; i++) {
+            arr2[i] = arr[i]
+          }
+          return arr2
+        }
+
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        /* harmony default export */ __webpack_exports__["default"] = {
+          data: function data() {
+            return {}
+          },
+          methods: {
+            hoverin: function hoverin(clases) {
+              var element = document.getElementsByClassName(clases)
+
+              var _iterator = _createForOfIteratorHelper(element),
+                _step
+
+              try {
+                for (_iterator.s(); !(_step = _iterator.n()).done; ) {
+                  var _int = _step.value
+                  _int.style.fill = "white"
+                }
+              } catch (err) {
+                _iterator.e(err)
+              } finally {
+                _iterator.f()
+              }
+            },
+            hoverout: function hoverout(clases, color) {
+              var element = document.getElementsByClassName(clases)
+
+              var _iterator2 = _createForOfIteratorHelper(element),
+                _step2
+
+              try {
+                for (_iterator2.s(); !(_step2 = _iterator2.n()).done; ) {
+                  var _int2 = _step2.value
+                  _int2.style.fill = color
+                }
+              } catch (err) {
+                _iterator2.e(err)
+              } finally {
+                _iterator2.f()
+              }
+
+              console.log(element)
+            },
+          },
+        }
+
+        /***/
+      },
+
     /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Loader.vue?vue&type=script&lang=js&":
       /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Loader.vue?vue&type=script&lang=js& ***!
@@ -2171,6 +2457,114 @@
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         "use strict"
         __webpack_require__.r(__webpack_exports__)
+        function _createForOfIteratorHelper(o, allowArrayLike) {
+          var it
+          if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {
+            if (
+              Array.isArray(o) ||
+              (it = _unsupportedIterableToArray(o)) ||
+              (allowArrayLike && o && typeof o.length === "number")
+            ) {
+              if (it) o = it
+              var i = 0
+              var F = function F() {}
+              return {
+                s: F,
+                n: function n() {
+                  if (i >= o.length) return { done: true }
+                  return { done: false, value: o[i++] }
+                },
+                e: function e(_e) {
+                  throw _e
+                },
+                f: F,
+              }
+            }
+            throw new TypeError(
+              "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            )
+          }
+          var normalCompletion = true,
+            didErr = false,
+            err
+          return {
+            s: function s() {
+              it = o[Symbol.iterator]()
+            },
+            n: function n() {
+              var step = it.next()
+              normalCompletion = step.done
+              return step
+            },
+            e: function e(_e2) {
+              didErr = true
+              err = _e2
+            },
+            f: function f() {
+              try {
+                if (!normalCompletion && it["return"] != null) it["return"]()
+              } finally {
+                if (didErr) throw err
+              }
+            },
+          }
+        }
+
+        function _unsupportedIterableToArray(o, minLen) {
+          if (!o) return
+          if (typeof o === "string") return _arrayLikeToArray(o, minLen)
+          var n = Object.prototype.toString.call(o).slice(8, -1)
+          if (n === "Object" && o.constructor) n = o.constructor.name
+          if (n === "Map" || n === "Set") return Array.from(o)
+          if (
+            n === "Arguments" ||
+            /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+          )
+            return _arrayLikeToArray(o, minLen)
+        }
+
+        function _arrayLikeToArray(arr, len) {
+          if (len == null || len > arr.length) len = arr.length
+          for (var i = 0, arr2 = new Array(len); i < len; i++) {
+            arr2[i] = arr[i]
+          }
+          return arr2
+        }
+
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
         //
         //
         //
@@ -2277,40 +2671,210 @@
               if (!this.show) {
                 element.classList.add("hidden")
                 element.classList.remove("show")
-              } // console.log(this.show);
+              }
             },
-            changeColor: function changeColor() {
-              this.count++
+            changeColor: function changeColor(
+              count,
+              position,
+              positionn1,
+              positionn2,
+              color
+            ) {
+              var ncolor = "#EAEAEA"
               var description = document.getElementById("description")
               var element = document.getElementById("showed")
+              var active = document.getElementById(position)
+              var nactive1 = document.getElementById(positionn1)
+              var nactive2 = document.getElementById(positionn2)
+              var x = 0
 
-              if (this.count > 3) {
-                this.count = 1
+              if (position == "top") {
+                // console.log(active.childNodes[0].childNodes);
+                var _iterator = _createForOfIteratorHelper(
+                    active.childNodes[0].childNodes
+                  ),
+                  _step
+
+                try {
+                  for (_iterator.s(); !(_step = _iterator.n()).done; ) {
+                    var item = _step.value
+
+                    if (item.nodeName !== "#text") {
+                      item.style.fill = color
+                    }
+                  }
+                } catch (err) {
+                  _iterator.e(err)
+                } finally {
+                  _iterator.f()
+                }
+
+                var _iterator2 = _createForOfIteratorHelper(
+                    nactive1.childNodes[2].childNodes
+                  ),
+                  _step2
+
+                try {
+                  for (_iterator2.s(); !(_step2 = _iterator2.n()).done; ) {
+                    var iterator = _step2.value
+
+                    if (iterator.nodeName !== "#text") {
+                      iterator.style.fill = ncolor
+                    }
+                  }
+                } catch (err) {
+                  _iterator2.e(err)
+                } finally {
+                  _iterator2.f()
+                }
+
+                var _iterator3 = _createForOfIteratorHelper(
+                    nactive2.childNodes[2].childNodes
+                  ),
+                  _step3
+
+                try {
+                  for (_iterator3.s(); !(_step3 = _iterator3.n()).done; ) {
+                    var _iterator4 = _step3.value
+
+                    if (_iterator4.nodeName !== "#text") {
+                      _iterator4.style.fill = ncolor
+                    }
+                  }
+                } catch (err) {
+                  _iterator3.e(err)
+                } finally {
+                  _iterator3.f()
+                }
+              } else {
+                // console.log(active.childNodes[2].childNodes);
+                var _iterator5 = _createForOfIteratorHelper(
+                    active.childNodes[2].childNodes
+                  ),
+                  _step4
+
+                try {
+                  for (_iterator5.s(); !(_step4 = _iterator5.n()).done; ) {
+                    var _item = _step4.value
+
+                    if (_item.nodeName !== "#text") {
+                      _item.style.fill = color
+                    }
+                  }
+                } catch (err) {
+                  _iterator5.e(err)
+                } finally {
+                  _iterator5.f()
+                }
+
+                if (positionn1 == "top") {
+                  var _iterator6 = _createForOfIteratorHelper(
+                      nactive1.childNodes[0].childNodes
+                    ),
+                    _step5
+
+                  try {
+                    for (_iterator6.s(); !(_step5 = _iterator6.n()).done; ) {
+                      var _iterator8 = _step5.value
+
+                      if (_iterator8.nodeName !== "#text") {
+                        _iterator8.style.fill = ncolor
+                      }
+                    }
+                  } catch (err) {
+                    _iterator6.e(err)
+                  } finally {
+                    _iterator6.f()
+                  }
+
+                  var _iterator7 = _createForOfIteratorHelper(
+                      nactive2.childNodes[2].childNodes
+                    ),
+                    _step6
+
+                  try {
+                    for (_iterator7.s(); !(_step6 = _iterator7.n()).done; ) {
+                      var _iterator9 = _step6.value
+
+                      if (_iterator9.nodeName !== "#text") {
+                        _iterator9.style.fill = ncolor
+                      }
+                    }
+                  } catch (err) {
+                    _iterator7.e(err)
+                  } finally {
+                    _iterator7.f()
+                  }
+                } else {
+                  var _iterator10 = _createForOfIteratorHelper(
+                      nactive1.childNodes[2].childNodes
+                    ),
+                    _step7
+
+                  try {
+                    for (_iterator10.s(); !(_step7 = _iterator10.n()).done; ) {
+                      var _iterator12 = _step7.value
+
+                      if (_iterator12.nodeName !== "#text") {
+                        _iterator12.style.fill = ncolor
+                      }
+                    }
+                  } catch (err) {
+                    _iterator10.e(err)
+                  } finally {
+                    _iterator10.f()
+                  }
+
+                  var _iterator11 = _createForOfIteratorHelper(
+                      nactive2.childNodes[0].childNodes
+                    ),
+                    _step8
+
+                  try {
+                    for (_iterator11.s(); !(_step8 = _iterator11.n()).done; ) {
+                      var _iterator13 = _step8.value
+
+                      if (_iterator13.nodeName !== "#text") {
+                        _iterator13.style.fill = ncolor
+                      }
+                    }
+                  } catch (err) {
+                    _iterator11.e(err)
+                  } finally {
+                    _iterator11.f()
+                  }
+                }
               }
 
-              if (this.count == 1) {
+              if (count === 1) {
                 this.color = "blue"
+                description.classList.remove("yellow")
+                element.classList.remove("yellow")
                 description.classList.remove("red")
                 element.classList.remove("red")
                 description.classList.add("blue")
                 element.classList.add("blue")
               }
 
-              if (this.count == 2) {
+              if (count === 2) {
                 this.color = "yellow"
+                description.classList.remove("red")
+                element.classList.remove("red")
                 description.classList.remove("blue")
                 element.classList.remove("blue")
                 description.classList.add("yellow")
                 element.classList.add("yellow")
               }
 
-              if (this.count == 3) {
+              if (count === 3) {
                 this.color = "red"
+                description.classList.remove("blue")
+                element.classList.remove("blue")
                 description.classList.remove("yellow")
                 element.classList.remove("yellow")
                 description.classList.add("red")
                 element.classList.add("red")
-              } // console.log(this.count);
+              }
             },
           },
           mounted: function mounted() {},
@@ -7543,7 +8107,7 @@
         // module
         exports.push([
           module.i,
-          ".parraf {\n  font-size: 0.7em;\n}\n.justify-content-end img {\n  height: 26px;\n  width: auto;\n}\n.justify-content-end .name {\n  font-size: 1.2em;\n}\n.selected {\n  border: 5px solid black;\n  border-radius: 50%;\n}\n.water-3 {\n  left: -180px;\n  bottom: 30px;\n}",
+          ".parraf {\n  font-size: 0.7em;\n}\n.justify-content-end img {\n  height: 26px;\n  width: auto;\n}\n.justify-content-end .name {\n  font-size: 1.2em;\n}\n.d-inline-flex div {\n  width: 160px;\n}\n.d-inline-flex img {\n  width: 100%;\n  transition: all 0.2s ease-in-out;\n  border-radius: 50%;\n}\n.d-inline-flex img:hover {\n  border: 5px solid black;\n  border-radius: 50%;\n}\n.selected {\n  border: 5px solid black;\n  border-radius: 50%;\n}\n.water-3 {\n  left: -180px;\n  bottom: 30px;\n}",
           "",
         ])
 
@@ -7566,7 +8130,7 @@
         // module
         exports.push([
           module.i,
-          ".absolute {\n  position: absolute;\n}\n.relative {\n  position: relative;\n}\n.bars {\n  top: 0;\n  right: 0;\n  height: 40px;\n  margin-top: 20px;\n  padding-right: 15px;\n}\n.language {\n  bottom: 0;\n  left: 0;\n  margin-bottom: 20px;\n  margin-left: 15px;\n  cursor: pointer;\n  z-index: 5;\n}\n.head {\n  height: 50px;\n  top: 0;\n  left: 0;\n  margin-top: 20px;\n  margin-left: 15px;\n}\n.head img {\n  width: auto;\n  height: 100%;\n}",
+          ".menu {\n  height: 100vh;\n  width: 100vw;\n}\n.absolute {\n  position: absolute;\n}\n.fixed {\n  position: fixed;\n}\n.relative {\n  position: relative;\n}\n.bars {\n  top: 0;\n  right: 0;\n  height: 40px;\n  margin-top: 20px;\n  padding-right: 15px;\n}\n.language {\n  bottom: 0;\n  left: 0;\n  margin-bottom: 20px;\n  margin-left: 15px;\n  cursor: pointer;\n  z-index: 100;\n}\n.head {\n  height: 50px;\n  top: 0;\n  left: 0;\n  margin-top: 20px;\n  margin-left: 15px;\n  z-index: 10;\n}\n.head img {\n  width: auto;\n  height: 100%;\n}",
           "",
         ])
 
@@ -7589,7 +8153,7 @@
         // module
         exports.push([
           module.i,
-          "html, body {\n  overflow: hidden;\n}\n.header {\n  height: 50px;\n  width: 100%;\n  margin-top: 20px;\n}\n.relative {\n  position: relative;\n}\n.absolute {\n  position: absolute;\n}\n.ko {\n  height: calc((100% - 70px) - (4.5rem));\n}\n.ko .water-1 {\n  right: 90px;\n  top: 100px;\n}\n.all {\n  height: 100vh;\n}\n.all .water-2 {\n  right: -240px;\n  bottom: 50px;\n}\np {\n  margin: 0;\n}\n.rrss {\n  height: 320px;\n  width: 25%;\n  background: #2A2D34;\n  border-radius: 10px 10px 0px 0px;\n  transition: all 0.2s;\n  z-index: 2;\n  transform-origin: bottom;\n}\n.rrss .d-flex {\n  transition: all 0.2s;\n}\n.rrss .d-flex img {\n  height: 60px;\n}\n.rrss:hover {\n  transform: scale(1, 1.2);\n}\n.rrss:hover .d-flex {\n  transform: scale(1, calc(1/1.13));\n}\n#instagram:hover {\n  background-color: #EE4B7A;\n}\n#facebook:hover {\n  background-color: #0071BC;\n}\n#twitter:hover {\n  background-color: #34CCFE;\n}\n#whatsapp:hover {\n  background-color: #5EFA75;\n}",
+          ".header {\n  height: 50px;\n  width: 100%;\n  margin-top: 20px;\n}\n.relative {\n  position: relative;\n}\n.absolute {\n  position: absolute;\n}\n.ko {\n  height: calc((100% - 70px) - (4.5rem));\n}\n.ko .water-1 {\n  right: 90px;\n  top: 100px;\n}\n.all {\n  height: 100vh;\n}\n.all .water-2 {\n  right: -240px;\n  bottom: 50px;\n}\np {\n  margin: 0;\n}\n.rrss {\n  height: 320px;\n  width: 25%;\n  background: #2A2D34;\n  border-radius: 10px 10px 0px 0px;\n  transition: all 0.2s;\n  z-index: 2;\n  transform-origin: bottom;\n}\n.rrss .d-flex {\n  transition: all 0.2s;\n}\n.rrss .d-flex svg {\n  height: 60px;\n}\n.rrss:hover {\n  transform: scale(1, 1.2);\n}\n.rrss:hover .d-flex {\n  transform: scale(1, calc(1/1.2));\n}\n#instagram:hover {\n  background-color: #EE4B7A;\n}\n#facebook:hover {\n  background-color: #0071BC;\n}\n#twitter:hover {\n  background-color: #34CCFE;\n}\n#whatsapp:hover {\n  background-color: #5EFA75;\n}",
           "",
         ])
 
@@ -7635,7 +8199,7 @@
         // module
         exports.push([
           module.i,
-          ":root {\n  --gradient: linear-gradient(\n      to right,\n      #124074,\n      #0C2B4E,\n      #F7B32C,\n      #D19725,\n      #9E0031,\n      #780025\n  ) ;\n}\n.cont-logo, .cont-figure {\n  height: 100vh;\n  z-index: 1;\n}\n.cont-logo .head, .cont-figure .head {\n  height: 50px;\n  margin-top: 20px;\n}\n.cont-logo .head img, .cont-figure .head img {\n  width: auto;\n  height: 100%;\n}\n.cont-logo .content, .cont-figure .content {\n  height: auto;\n  width: 100%;\n}\n.cont-logo .content img, .cont-figure .content img {\n  height: 13em;\n}\n.cont-logo .foot, .cont-figure .foot {\n  height: 50px;\n  width: 100%;\n  margin-bottom: 20px;\n  position: relative;\n}\n.cont-logo .foot img, .cont-figure .foot img {\n  height: 2em;\n  width: auto;\n  padding: 0px 25px;\n}\n.hidden {\n  transform: translateX(0%);\n}\n.show {\n  transform: translateX(100%);\n}\n.pointer {\n  cursor: pointer;\n}\n.cont-description {\n  height: 95vh;\n  z-index: 2;\n  position: relative;\n  transition: all 0.5s;\n}\n.cont-description .description {\n  border-radius: 0px 0px 15px 15px;\n  z-index: 2;\n  width: 100%;\n}\n.cont-description .application {\n  position: absolute;\n  border-radius: 0px 0px 15px 15px;\n  height: 93%;\n  transition: all 0.5s;\n}\n.cont-description .application p {\n  margin-bottom: 0.5rem;\n}\n.more {\n  height: 8px;\n  width: 22px;\n  background: white;\n  border-radius: 0px 3px 3px 0px;\n}\n.relative {\n  position: relative;\n}\n.gradient {\n  transition: 0.5s ease all;\n}\n.gradient.blue {\n  background: linear-gradient(to right, #124074, #0C2B4E);\n  transition: 0.5s ease all;\n}\n.gradient.yellow {\n  background: linear-gradient(to right, #F7B32C, #D19725);\n  transition: 0.5s ease all;\n}\n.gradient.red {\n  background: linear-gradient(to right, #9E0031, #780025);\n  transition: 0.5s ease all;\n}\n@-webkit-keyframes change {\nfrom {\n    background: linear-gradient(90deg, #f90 0%, #444 0) 50%/5em;\n}\nto {\n    background: linear-gradient(90deg, #f90 100%, #444 0);\n}\n}\n@keyframes change {\nfrom {\n    background: linear-gradient(90deg, #f90 0%, #444 0) 50%/5em;\n}\nto {\n    background: linear-gradient(90deg, #f90 100%, #444 0);\n}\n}",
+          ":root {\n  --gradient: linear-gradient(\n      to right,\n      #124074,\n      #0C2B4E,\n      #F7B32C,\n      #D19725,\n      #9E0031,\n      #780025\n  ) ;\n}\n.cont-logo, .cont-figure {\n  height: 100vh;\n  z-index: 1;\n}\n.cont-logo .head, .cont-figure .head {\n  height: 50px;\n  margin-top: 20px;\n}\n.cont-logo .head img, .cont-figure .head img {\n  width: auto;\n  height: 100%;\n}\n.cont-logo .content, .cont-figure .content {\n  height: auto;\n  width: 100%;\n}\n.cont-logo .content svg, .cont-figure .content svg {\n  height: 13em;\n}\n.cont-logo .foot, .cont-figure .foot {\n  height: 50px;\n  width: 100%;\n  margin-bottom: 20px;\n  position: relative;\n}\n.cont-logo .foot img, .cont-figure .foot img {\n  height: 2em;\n  width: auto;\n  padding: 0px 25px;\n}\n.hidden {\n  transform: translateX(0%);\n}\n.show {\n  transform: translateX(100%);\n}\n.pointer {\n  cursor: pointer;\n}\n.cont-description {\n  height: 95vh;\n  z-index: 2;\n  position: relative;\n  transition: all 0.5s;\n}\n.cont-description .description {\n  border-radius: 0px 0px 15px 15px;\n  z-index: 2;\n  width: 100%;\n}\n.cont-description .application {\n  position: absolute;\n  border-radius: 0px 0px 15px 15px;\n  height: 93%;\n  transition: all 0.5s;\n}\n.cont-description .application p {\n  margin-bottom: 0.5rem;\n}\n#right:hover .paths path {\n  fill: #9E0031;\n}\n#top:hover .paths path {\n  fill: #124074;\n}\n#left:hover .paths path {\n  fill: #F7B32C;\n}\nsvg .paths path {\n  transition: 0.3s all ease;\n}\n.more {\n  height: 8px;\n  width: 22px;\n  background: white;\n  border-radius: 0px 3px 3px 0px;\n}\n.relative {\n  position: relative;\n}\n.gradient {\n  transition: 0.5s ease all;\n}\n.gradient.blue {\n  background: linear-gradient(to right, #124074, #0C2B4E);\n  transition: 0.5s ease all;\n}\n.gradient.yellow {\n  background: linear-gradient(to right, #F7B32C, #D19725);\n  transition: 0.5s ease all;\n}\n.gradient.red {\n  background: linear-gradient(to right, #9E0031, #780025);\n  transition: 0.5s ease all;\n}\n@-webkit-keyframes change {\nfrom {\n    background: linear-gradient(90deg, #f90 0%, #444 0) 50%/5em;\n}\nto {\n    background: linear-gradient(90deg, #f90 100%, #444 0);\n}\n}\n@keyframes change {\nfrom {\n    background: linear-gradient(90deg, #f90 0%, #444 0) 50%/5em;\n}\nto {\n    background: linear-gradient(90deg, #f90 100%, #444 0);\n}\n}",
           "",
         ])
 
@@ -42362,8 +42926,6 @@
                 "d-flex justify-content-between container-fluid all flex-wrap relative",
             },
             [
-              _c("absolute-component"),
-              _vm._v(" "),
               _c("div", { staticClass: "header" }),
               _vm._v(" "),
               _c(
@@ -42385,8 +42947,7 @@
                 ],
                 1
               ),
-            ],
-            1
+            ]
           )
         }
         var staticRenderFns = [
@@ -42412,7 +42973,7 @@
                 _c("div", { staticClass: "w-50" }, [
                   _c("p", { staticClass: "parraf text-black" }, [
                     _vm._v(
-                      "NUESTRO ENTORNO DE TRABAJO LO HEMOS DIVIDIDO EN TRES DIMENSIONES PRINCIPALES"
+                      "Nuestro entorno de trabajo lo hemos dividido en tres dimensiones principales:"
                     ),
                   ]),
                 ]),
@@ -42433,7 +42994,7 @@
                 _c("div", { staticClass: "w-50" }, [
                   _c("p", { staticClass: "parraf text-black mx-3" }, [
                     _vm._v(
-                      "EN 3DMENSIONAL COMO ANGENCIA DIGITAL SABEMOS LO COMPLICADO QUE PUEDE SER MATERIALIZAR UN PENSAMIENTO, PERO CON LA DIRECCIÓN CORRECTA ES POSIBLE HACERLO REALIDAD. CADA PROYECTO EN EL QUE PODEMOS TRABAJAR ES UNA OPORTUNIDAD PARA HACER ALGO DIFERENTE. CREEMOS QUE CADA IDEA ES IMPORTANTE, ES POR ESO QUE NUESTRO PROPÓSITO ES BRINDARLE UNA ATENCIÓN COMPLETAMENTE PERSONALIZADA QUE LO GUÍE EN EL DESARROLLO QUE PROYECTA A CORTO, MEDIANO Y LARGO PLAZO."
+                      "En 3DMENSIONAL como agencia digital sabemos lo complicado que puede ser materializar un pensamiento, pero con la dirección correcta es posible hacerlo realidad. Cada proyecto en el que podemos trabajar es una oportunidad para hacer algo diferente. Creemos que cada idea es importante, es por eso que nuestro propósito es brindarle una atención completamente personalizada que lo guíe en el desarrollo que proyecta a corto, mediano y largo plazo."
                     ),
                   ]),
                 ]),
@@ -42480,7 +43041,7 @@
                 _c("div", { staticClass: "w-100 ml-5" }, [
                   _c("p", { staticClass: "parraf text-black ml-5 mr-4 pr-3" }, [
                     _vm._v(
-                      "EN CADA UNO DE ESTOS SERVICIOS CONTAMOS CON UN EQUIPO CAPACITADO Y DEDICADO, CUYO OBJETIVO ES OFRECERLE EL MEJOR ASESORAMIENTO Y ATENCIÓN PARA QUE TU PROYECTO Y SUEÑOS SEAN REALIDAD. BUSCAMOS ENFOCARNOS EN TODO LO QUE ES VERDADERO, TODO LO QUE ES HONORABLE, TODO LO QUE ES PURO, TODO LO HERMOSO Y TODO LO ADMIRABLE PARA PLASMARLO Y PODER TRANSMITIR Y CREAR COSAS EXCELENTES. NO VEMOS UN PROYECTO COMO UN TRABAJO SINO COMO UNA OPORTUNIDAD PARA CREAR ARTE CON NUESTROS TALENTOS, PORQUE NOS APASIONA LO QUE HACEMOS."
+                      "En cada uno de estos servicios contamos con un equipo capacitado y dedicado, cuyo objetivo es ofrecerle el mejor asesoramiento y atención para que tu proyecto y sueños sean realidad. buscamos enfocarnos en todo lo que es verdadero, todo lo que es honorable, todo lo que es puro, todo lo hermoso y todo lo admirable para plasmarlo y poder transmitir y crear cosas excelentes. No vemos un proyecto como un trabajo sino como una oportunidad para crear arte con nuestros talentos, porque nos apasiona lo que hacemos."
                     ),
                   ]),
                 ]),
@@ -42504,19 +43065,22 @@
                       "div",
                       { staticClass: "d-inline-flex flex-column text-center" },
                       [
-                        _c("div", { staticClass: "mt-2 mx-4 text-center" }, [
-                          _c("img", {
-                            staticClass: "selected",
-                            attrs: { src: "/images/picture-1.png", alt: "" },
-                          }),
-                        ]),
+                        _c(
+                          "div",
+                          { staticClass: "mt-2 mx-4 text-center relative" },
+                          [
+                            _c("img", {
+                              attrs: { src: "/images/picture-1.png", alt: "" },
+                            }),
+                          ]
+                        ),
                         _vm._v(" "),
                         _c("p", { staticClass: "text-black text-900 name" }, [
                           _vm._v("EDGARDO LÓPEZ"),
                         ]),
                         _vm._v(" "),
                         _c("p", { staticClass: "parraf text-900" }, [
-                          _vm._v("CEO/CMO - DIRECTOR DE MARKETING"),
+                          _vm._v("CEO/CMO - Directo de Marketing"),
                         ]),
                       ]
                     ),
@@ -42525,18 +43089,22 @@
                       "div",
                       { staticClass: "d-inline-flex flex-column text-center" },
                       [
-                        _c("div", { staticClass: "mt-2 mx-4 text-center" }, [
-                          _c("img", {
-                            attrs: { src: "/images/picture-2.png", alt: "" },
-                          }),
-                        ]),
+                        _c(
+                          "div",
+                          { staticClass: "mt-2 mx-4 text-center relative" },
+                          [
+                            _c("img", {
+                              attrs: { src: "/images/picture-2.png", alt: "" },
+                            }),
+                          ]
+                        ),
                         _vm._v(" "),
                         _c("p", { staticClass: "text-black text-900 name" }, [
                           _vm._v("RAFAEL CALLES"),
                         ]),
                         _vm._v(" "),
                         _c("p", { staticClass: "parraf text-900" }, [
-                          _vm._v("DIRECTOR CREATIVO"),
+                          _vm._v("Director Creativo"),
                         ]),
                       ]
                     ),
@@ -42545,18 +43113,22 @@
                       "div",
                       { staticClass: "d-inline-flex flex-column text-center" },
                       [
-                        _c("div", { staticClass: "mt-2 mx-4 text-center" }, [
-                          _c("img", {
-                            attrs: { src: "/images/picture-3.png", alt: "" },
-                          }),
-                        ]),
+                        _c(
+                          "div",
+                          { staticClass: "mt-2 mx-4 text-center relative" },
+                          [
+                            _c("img", {
+                              attrs: { src: "/images/picture-3.png", alt: "" },
+                            }),
+                          ]
+                        ),
                         _vm._v(" "),
                         _c("p", { staticClass: "text-black text-900 name" }, [
                           _vm._v("JOSÉ QUINTERO"),
                         ]),
                         _vm._v(" "),
                         _c("p", { staticClass: "parraf text-900" }, [
-                          _vm._v("DIRECTOR DE DESARROLLO"),
+                          _vm._v("Director de Desarrollo"),
                         ]),
                       ]
                     ),
@@ -42565,18 +43137,22 @@
                       "div",
                       { staticClass: "d-inline-flex flex-column text-center" },
                       [
-                        _c("div", { staticClass: "mt-2 mx-4 text-center" }, [
-                          _c("img", {
-                            attrs: { src: "/images/picture-4.png", alt: "" },
-                          }),
-                        ]),
+                        _c(
+                          "div",
+                          { staticClass: "mt-2 mx-4 text-center relative" },
+                          [
+                            _c("img", {
+                              attrs: { src: "/images/picture-4.png", alt: "" },
+                            }),
+                          ]
+                        ),
                         _vm._v(" "),
                         _c("p", { staticClass: "text-black text-900 name" }, [
                           _vm._v("OSBEL TORRES"),
                         ]),
                         _vm._v(" "),
                         _c("p", { staticClass: "parraf text-900" }, [
-                          _vm._v("DIRECTOR AUDIOVISUAL"),
+                          _vm._v("Director Audiovisual"),
                         ]),
                       ]
                     ),
@@ -42624,23 +43200,21 @@
             var _vm = this
             var _h = _vm.$createElement
             var _c = _vm._self._c || _h
-            return _c("div", [
-              _c("div", { staticClass: "head absolute" }, [
+            return _c("div", { staticClass: "menu" }, [
+              _c("div", { staticClass: "head fixed" }, [
                 _c("img", {
                   attrs: { src: "/images/svgs/3dmensional-logo.svg", alt: "" },
                 }),
               ]),
               _vm._v(" "),
               _c("img", {
-                staticClass: "absolute bars",
+                staticClass: "fixed bars",
                 attrs: { src: "/images/svgs/bars.svg", alt: "" },
               }),
               _vm._v(" "),
-              _c(
-                "p",
-                { staticClass: "text-black text-900 absolute language" },
-                [_vm._v("EN")]
-              ),
+              _c("p", { staticClass: "text-black text-900 fixed language" }, [
+                _vm._v("EN"),
+              ]),
             ])
           },
         ]
@@ -42684,8 +43258,6 @@
             [
               _c("div", { staticClass: "header mb-5" }),
               _vm._v(" "),
-              _c("absolute-component"),
-              _vm._v(" "),
               _c(
                 "div",
                 {
@@ -42703,7 +43275,324 @@
                   _vm._v(" "),
                   _vm._m(1),
                   _vm._v(" "),
-                  _vm._m(2),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex flex-row justify-content-center align-items-end h-100",
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "rrss",
+                          attrs: { id: "instagram" },
+                          on: {
+                            mouseenter: function($event) {
+                              return _vm.hoverin("ig")
+                            },
+                            mouseleave: function($event) {
+                              return _vm.hoverout("ig", "#EE4B7A")
+                            },
+                          },
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-100 h-100 d-flex flex-column justify-content-around align-items-center",
+                            },
+                            [
+                              _c(
+                                "svg",
+                                {
+                                  staticStyle: {
+                                    "enable-background": "new 0 0 60.1 60.1",
+                                  },
+                                  attrs: {
+                                    id: "instagram_i",
+                                    version: "1.1",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    "xmlns:xlink":
+                                      "http://www.w3.org/1999/xlink",
+                                    x: "0px",
+                                    y: "0px",
+                                    viewBox: "0 0 60.1 60.1",
+                                    "xml:space": "preserve",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "svg:style",
+                                    { attrs: { type: "text/css" } },
+                                    [
+                                      _vm._v(
+                                        "\n                        .ig{fill:#EE4B7A;}\n                    "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("g", { attrs: { id: "instagram-c" } }, [
+                                    _c("path", {
+                                      staticClass: "ig",
+                                      attrs: {
+                                        id: "Path_928",
+                                        d:
+                                          "M42.2,0H17.9C8,0,0,8,0,17.9c0,0,0,0,0,0v24.3c0,9.9,8,17.9,17.9,17.9c0,0,0,0,0,0h24.3\n                            c9.9,0,17.9-8,17.9-17.9c0,0,0,0,0,0V17.9C60.1,8,52.1,0,42.2,0C42.2,0,42.2,0,42.2,0z M54.1,42.1c0,6.5-5.3,11.8-11.8,11.8H18\n                            c-6.5,0-11.8-5.3-11.8-11.8V17.8C6.2,11.3,11.5,6,18,6h24.3c6.5,0,11.8,5.3,11.8,11.8V42.1z",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      staticClass: "ig",
+                                      attrs: {
+                                        id: "Path_929",
+                                        d:
+                                          "M30.1,14.5c-8.6,0-15.5,6.9-15.5,15.5s6.9,15.5,15.5,15.5S45.6,38.6,45.6,30l0,0l0,0\n                            c0-8.5-6.9-15.5-15.4-15.5C30.2,14.5,30.1,14.5,30.1,14.5z M30.1,39.5c-5.2,0-9.5-4.3-9.5-9.5s4.3-9.5,9.5-9.5s9.5,4.3,9.5,9.5v0\n                            l0,0C39.6,35.2,35.3,39.5,30.1,39.5z",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c("circle", {
+                                      staticClass: "ig",
+                                      attrs: {
+                                        id: "Ellipse_33",
+                                        cx: "45.7",
+                                        cy: "14.6",
+                                        r: "3.7",
+                                      },
+                                    }),
+                                  ]),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "text-light" }, [
+                                _vm._v("3DMENSIONAL"),
+                              ]),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "rrss ", attrs: { id: "facebook" } },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-100 h-100 d-flex flex-column justify-content-around align-items-center",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.hoverin("face")
+                                },
+                                mouseleave: function($event) {
+                                  return _vm.hoverout("face", "#0071BC")
+                                },
+                              },
+                            },
+                            [
+                              _c(
+                                "svg",
+                                {
+                                  staticStyle: {
+                                    "enable-background": "new 0 0 27.6 60",
+                                  },
+                                  attrs: {
+                                    id: "facebook_i",
+                                    version: "1.1",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    "xmlns:xlink":
+                                      "http://www.w3.org/1999/xlink",
+                                    x: "0px",
+                                    y: "0px",
+                                    viewBox: "0 0 27.6 60",
+                                    "xml:space": "preserve",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "svg:style",
+                                    { attrs: { type: "text/css" } },
+                                    [
+                                      _vm._v(
+                                        "\n                        .face{fill:#0071BC;}\n                    "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("g", { attrs: { id: "face-c" } }, [
+                                    _c("path", {
+                                      staticClass: "face",
+                                      attrs: {
+                                        id: "path",
+                                        d:
+                                          "M26.6,29.9h-8.2V60H5.9V29.9H0V19.3h5.9v-6.8C5.9,7.6,8.2,0,18.4,0h9.2v10.3h-6.7\n                            c-1.1,0-2.6,0.5-2.6,2.9v6.2h9.3L26.6,29.9z",
+                                      },
+                                    }),
+                                  ]),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "text-light" }, [
+                                _vm._v("3DMENSIONAL"),
+                              ]),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "rrss d-flex flex-column justify-content-around align-items-center",
+                          attrs: { id: "twitter" },
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-100 h-100 d-flex flex-column justify-content-around align-items-center",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.hoverin("twit")
+                                },
+                                mouseleave: function($event) {
+                                  return _vm.hoverout("twit", "#34CCFE")
+                                },
+                              },
+                            },
+                            [
+                              _c(
+                                "svg",
+                                {
+                                  staticStyle: {
+                                    "enable-background": "new 0 0 73.6 60.1",
+                                  },
+                                  attrs: {
+                                    id: "twitter_i",
+                                    version: "1.1",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    "xmlns:xlink":
+                                      "http://www.w3.org/1999/xlink",
+                                    x: "0px",
+                                    y: "0px",
+                                    viewBox: "0 0 73.6 60.1",
+                                    "xml:space": "preserve",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "svg:style",
+                                    { attrs: { type: "text/css" } },
+                                    [
+                                      _vm._v(
+                                        "\n                        .twit{fill:#34CCFE;}\n                    "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("g", { attrs: { id: "twitter-c" } }, [
+                                    _c("path", {
+                                      staticClass: "twit",
+                                      attrs: {
+                                        id: "Path_927",
+                                        d:
+                                          "M73.6,7.1c-2.8,1.2-5.7,2-8.7,2.4c3.2-1.9,5.5-4.9,6.7-8.4c-3,1.8-6.2,3-9.6,3.7\n                            c-5.7-6.1-15.3-6.4-21.4-0.7c-3.9,3.7-5.6,9.2-4.4,14.5C24,18,12.7,12.2,5,2.8C1,9.7,3,18.6,9.7,23c-2.4-0.1-4.8-0.7-6.9-1.9v0.2\n                            c0,7.2,5.1,13.4,12.2,14.9c-2.2,0.6-4.5,0.7-6.8,0.3c2,6.2,7.7,10.4,14.2,10.5C16,52,8,54.2,0,53.3c6.9,4.5,15,6.8,23.2,6.8\n                            C51.1,60.1,66.3,37,66.3,17v-2C69.1,12.7,71.6,10.1,73.6,7.1L73.6,7.1z",
+                                      },
+                                    }),
+                                  ]),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "text-light" }, [
+                                _vm._v("3DMENSIONAL"),
+                              ]),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "rrss d-flex flex-column justify-content-around align-items-center",
+                          attrs: { id: "whatsapp" },
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-100 h-100 d-flex flex-column justify-content-around align-items-center",
+                              on: {
+                                mouseover: function($event) {
+                                  return _vm.hoverin("wha")
+                                },
+                                mouseleave: function($event) {
+                                  return _vm.hoverout("wha", "#5EFA75")
+                                },
+                              },
+                            },
+                            [
+                              _c(
+                                "svg",
+                                {
+                                  staticStyle: {
+                                    "enable-background": "new 0 0 59.5 60",
+                                  },
+                                  attrs: {
+                                    id: "twitter_i",
+                                    version: "1.1",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    "xmlns:xlink":
+                                      "http://www.w3.org/1999/xlink",
+                                    x: "0px",
+                                    y: "0px",
+                                    viewBox: "0 0 59.5 60",
+                                    "xml:space": "preserve",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "svg:style",
+                                    { attrs: { type: "text/css" } },
+                                    [
+                                      _vm._v(
+                                        "\n                        .wha{fill:#5EFA75;}\n                    "
+                                      ),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("g", { attrs: { id: "whatsapp-c" } }, [
+                                    _c("path", {
+                                      staticClass: "wha",
+                                      attrs: {
+                                        id: "Path_941",
+                                        d:
+                                          "M44,35.9c-0.7-0.4-4.3-2.3-5-2.6s-1.2-0.4-1.7,0.3c-0.8,1-1.6,1.9-2.5,2.8\n                            c-0.4,0.4-1.1,0.5-1.6,0.1c-2.2-1-4.1-2.3-5.9-3.9c-1.6-1.6-2.9-3.4-4-5.3c-0.3-0.4-0.2-1.1,0.2-1.4c0.1,0,0.1-0.1,0.2-0.1\n                            c0.4-0.4,0.8-0.8,1.2-1.3c0.3-0.4,0.6-0.8,0.8-1.2c0.2-0.4,0.2-0.9,0-1.3c-0.2-0.4-1.5-4.1-2.1-5.6s-1.2-1.3-1.6-1.3\n                            S21.1,15,20.6,15c-0.8,0-1.5,0.3-2,0.9c-1.8,1.5-2.8,3.8-2.8,6.1c-0.1,3.7,2.4,7.3,2.8,7.8s4.9,8.5,12.3,11.7s7.5,2.3,8.9,2.2\n                            s4.5-1.6,5.2-3.4c0.5-1.1,0.7-2.3,0.6-3.5C45.1,36.4,44.6,36.1,44,35.9z M30.3,53.6c-4.8,0-9.4-1.4-13.4-4l-9.4,3l3-9\n                            C2.6,32.7,5.1,17.5,16,9.6s26.1-5.4,34,5.5c7.9,10.9,5.4,26.1-5.5,34C40.3,52,35.4,53.6,30.3,53.6z M30.3,0\n                            C14.2,0,1.1,13.1,1.1,29.2c0,5.3,1.5,10.5,4.2,15.1L0,60l16.2-5.2c14,8,31.9,3.2,39.9-10.9s3.2-31.9-10.9-39.9\n                            c-0.3-0.2-0.5-0.3-0.8-0.5C40.1,1.3,35.2,0,30.3,0z",
+                                      },
+                                    }),
+                                  ]),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "text-light" }, [
+                                _vm._v("3DMENSIONAL"),
+                              ]),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
                   _vm._v(" "),
                   _c("watermark-component", { staticClass: "water-1" }),
                 ],
@@ -42732,121 +43621,13 @@
             var _c = _vm._self._c || _h
             return _c("div", { staticClass: "mt-1 d-flex flex-row" }, [
               _c("p", { staticClass: "w-50 text-black text-900" }, [
-                _vm._v("CONTACTO@3DMENSIONAL_AGENCY"),
+                _vm._v("Contacto@3dmensional_agency"),
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "text-black text-900" }, [
                 _vm._v("+584241131116"),
               ]),
             ])
-          },
-          function() {
-            var _vm = this
-            var _h = _vm.$createElement
-            var _c = _vm._self._c || _h
-            return _c(
-              "div",
-              {
-                staticClass:
-                  "d-flex flex-row justify-content-center align-items-end h-100",
-              },
-              [
-                _c("div", { staticClass: "rrss", attrs: { id: "instagram" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "w-100 h-100 d-flex flex-column justify-content-around align-items-center",
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/images/svgs/instagram-c.svg", alt: "" },
-                      }),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "text-light" }, [
-                        _vm._v("3DMENSIONAL"),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "rrss ", attrs: { id: "facebook" } }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "w-100 h-100 d-flex flex-column justify-content-around align-items-center",
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/images/svgs/facebook-c.svg", alt: "" },
-                      }),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "text-light" }, [
-                        _vm._v("3DMENSIONAL"),
-                      ]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "rrss d-flex flex-column justify-content-around align-items-center",
-                    attrs: { id: "twitter" },
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "w-100 h-100 d-flex flex-column justify-content-around align-items-center",
-                      },
-                      [
-                        _c("img", {
-                          attrs: { src: "/images/svgs/twitter-c.svg", alt: "" },
-                        }),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-light" }, [
-                          _vm._v("3DMENSIONAL"),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "rrss d-flex flex-column justify-content-around align-items-center",
-                    attrs: { id: "whatsapp" },
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "w-100 h-100 d-flex flex-column justify-content-around align-items-center",
-                      },
-                      [
-                        _c("img", {
-                          attrs: {
-                            src: "/images/svgs/whatsapp-c.svg",
-                            alt: "",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-light" }, [
-                          _vm._v("3DMENSIONAL"),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-              ]
-            )
           },
         ]
         render._withStripped = true
@@ -42940,8 +43721,6 @@
                 "d-flex justify-content-center container-fluid flex-wrap relative",
             },
             [
-              _c("absolute-component"),
-              _vm._v(" "),
               _c(
                 "div",
                 {
@@ -42961,15 +43740,168 @@
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "logo" }, [
-                        _c("img", {
-                          staticClass: "pointer",
-                          attrs: { src: "/images/svgs/logo-top.svg", alt: "" },
-                          on: {
-                            click: function($event) {
-                              return _vm.changeColor()
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "pointer",
+                            staticStyle: {
+                              "enable-background": "new 0 0 189.4 215.3",
+                            },
+                            attrs: {
+                              version: "1.1",
+                              id: "Capa_1",
+                              xmlns: "http://www.w3.org/2000/svg",
+                              "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                              x: "0px",
+                              y: "0px",
+                              viewBox: "0 0 189.4 215.3",
+                              "xml:space": "preserve",
                             },
                           },
-                        }),
+                          [
+                            _c("svg:style", { attrs: { type: "text/css" } }, [
+                              _vm._v(
+                                "\n                        .st0{fill:transparent;}\n\t                    .st1{fill:#EAEAEA;}\n                        .st2{fill:#124074;}\n                    "
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c("g", { attrs: { id: "logo-c" } }, [
+                              _c(
+                                "g",
+                                {
+                                  attrs: { id: "right" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.changeColor(
+                                        3,
+                                        "right",
+                                        "top",
+                                        "left",
+                                        "#9E0031"
+                                      )
+                                    },
+                                  },
+                                },
+                                [
+                                  _c("polygon", {
+                                    staticClass: "st0",
+                                    attrs: {
+                                      points:
+                                        "189.4,51.4 189.4,162.4 187.3,163.7 97.9,215.3 94.7,215.3 94.7,106.1 187.2,52.7 \t\t",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("g", { staticClass: "paths" }, [
+                                    _c("path", {
+                                      staticClass: "st1",
+                                      attrs: {
+                                        id: "Path_792",
+                                        d:
+                                          "M148.2,144.9L96.1,175v-25.3l52.7-30.4c1.6-0.9,3.6-0.4,4.5,1.2c0.3,0.5,0.4,1.1,0.4,1.6v13.3\n                                    C153.7,139.3,151.6,142.9,148.2,144.9z",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      staticClass: "st1",
+                                      attrs: {
+                                        id: "Path_793",
+                                        d:
+                                          "M188.6,55.1l-92.5,53.4v25.3l66.5-38.4c1.6-0.9,3.6-0.4,4.5,1.2c0.3,0.5,0.4,1.1,0.4,1.6v45.3\n                                    c0,3.9-2.1,7.5-5.5,9.5l-66,38.1v24.3c1.4-0.2,2.8-0.6,4-1.4h0.1l83.9-48.4l0,0c3.4-2,5.4-5.6,5.4-9.5V59.3\n                                    C189.4,57.8,189.1,56.4,188.6,55.1z",
+                                      },
+                                    }),
+                                  ]),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "g",
+                                {
+                                  attrs: { id: "left" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.changeColor(
+                                        2,
+                                        "left",
+                                        "right",
+                                        "top",
+                                        "#F7B32C"
+                                      )
+                                    },
+                                  },
+                                },
+                                [
+                                  _c("polygon", {
+                                    staticClass: "st0",
+                                    attrs: {
+                                      points:
+                                        "0,51.4 0,162.4 2.2,163.7 91.5,215.3 94.7,215.3 94.7,106.1 2.2,52.7 \t\t",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("g", { staticClass: "paths" }, [
+                                    _c("path", {
+                                      staticClass: "st1",
+                                      attrs: {
+                                        id: "Path_794",
+                                        d:
+                                          "M0.9,55.1C0.3,56.4,0,57.8,0,59.3v14.2C0,77.4,2.1,81,5.5,83l87.9,50.7v-25.3L0.9,55.1z",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      staticClass: "st1",
+                                      attrs: {
+                                        id: "Path_795",
+                                        d:
+                                          "M0,101.5v13.3c0,3.9,2.1,7.5,5.5,9.5L93.3,175v-25.3l-88.4-51c-1.6-0.9-3.6-0.4-4.5,1.2\n                                    C0.2,100.4,0,101,0,101.5z",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c("path", {
+                                      staticClass: "st1",
+                                      attrs: {
+                                        id: "Path_796",
+                                        d:
+                                          "M0,142.8V156c0,3.9,2.1,7.5,5.4,9.5l0,0l83.8,48.4h0.1c1.2,0.7,2.6,1.2,4,1.4V191L4.9,139.9\n                                    c-1.6-0.9-3.6-0.4-4.5,1.2C0.2,141.6,0,142.2,0,142.8z",
+                                      },
+                                    }),
+                                  ]),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "g",
+                                {
+                                  attrs: { id: "top" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.changeColor(
+                                        1,
+                                        "top",
+                                        "left",
+                                        "right",
+                                        "#124074"
+                                      )
+                                    },
+                                  },
+                                },
+                                [
+                                  _c("g", { staticClass: "paths" }, [
+                                    _c("path", {
+                                      staticClass: "st2",
+                                      attrs: {
+                                        id: "Path_797",
+                                        d:
+                                          "M184,49.8L100.2,1.5c-3.4-2-7.6-2-10.9,0L5.5,49.8c-1.3,0.7-2.4,1.7-3.3,2.9l92.5,53.4\n                                    l92.5-53.4C186.3,51.5,185.2,50.6,184,49.8z",
+                                      },
+                                    }),
+                                  ]),
+                                ]
+                              ),
+                            ]),
+                          ],
+                          1
+                        ),
                         _vm._v(" "),
                         _c("p", { staticClass: "text-center text-900 mt-2" }, [
                           _vm._v("CLICK"),
@@ -43249,8 +44181,7 @@
                   ),
                 ]
               ),
-            ],
-            1
+            ]
           )
         }
         var staticRenderFns = []
@@ -62788,23 +63719,26 @@
         /* harmony import */ var _Contacts_vue_vue_type_template_id_6766143e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
           /*! ./Contacts.vue?vue&type=template&id=6766143e& */ "./resources/js/components/Contacts.vue?vue&type=template&id=6766143e&"
         )
-        /* harmony import */ var _Contacts_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+        /* harmony import */ var _Contacts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ./Contacts.vue?vue&type=script&lang=js& */ "./resources/js/components/Contacts.vue?vue&type=script&lang=js&"
+        )
+        /* empty/unused harmony star reexport */ /* harmony import */ var _Contacts_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
           /*! ./Contacts.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/components/Contacts.vue?vue&type=style&index=0&lang=scss&"
         )
-        /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+        /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
           /*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js"
         )
-
-        var script = {}
 
         /* normalize component */
 
         var component = Object(
-          _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[
+          _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__[
             "default"
           ]
         )(
-          script,
+          _Contacts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[
+            "default"
+          ],
           _Contacts_vue_vue_type_template_id_6766143e___WEBPACK_IMPORTED_MODULE_0__[
             "render"
           ],
@@ -62824,6 +63758,27 @@
         component.options.__file = "resources/js/components/Contacts.vue"
         /* harmony default export */ __webpack_exports__["default"] =
           component.exports
+
+        /***/
+      },
+
+    /***/ "./resources/js/components/Contacts.vue?vue&type=script&lang=js&":
+      /*!***********************************************************************!*\
+  !*** ./resources/js/components/Contacts.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        "use strict"
+        __webpack_require__.r(__webpack_exports__)
+        /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contacts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Contacts.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Contacts.vue?vue&type=script&lang=js&"
+        )
+        /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[
+          "default"
+        ] =
+          _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contacts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[
+            "default"
+          ]
 
         /***/
       },
