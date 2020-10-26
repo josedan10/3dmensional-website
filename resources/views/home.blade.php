@@ -42,7 +42,7 @@
         body{
             background-color:#fff;
             margin: 0px;
-            height: 100%;
+            /* height: 100%; */
             overflow-x: hidden;
         }
 
@@ -98,7 +98,10 @@
 
     <main>
         <div id="app" class="content">
+            <absolute-component></absolute-component>
+            <services-component></services-component>
             <about-component></about-component>
+            <contacts-component></contacts-component>
         </div>
     </main>
 </body>
