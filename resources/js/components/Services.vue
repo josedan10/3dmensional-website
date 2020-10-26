@@ -4,12 +4,11 @@
             <div class="content d-flex flex-column align-items-center">
                 <p class="text-black text-900 f-50">SERVICES</p>
                 <div class="logo" >
-                    <!-- <img @click="changeColor()" class="pointer" src="/images/svgs/logo-top.svg" alt=""> -->
                     <svg class="pointer" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 189.4 215.3" style="enable-background:new 0 0 189.4 215.3;" xml:space="preserve">
                     <svg:style type="text/css">
-                        .st0{fill:transparent;}
-	                    .st1{fill:#EAEAEA;}
-                        .st2{fill:#124074;}
+                      st0{fill:transparent;}
+                      .st1{fill:#EAEAEA;}
+                      .st2{fill:#124074;}
                     </svg:style>
                     <g id="logo-c">
                         <g id="right" @click="changeColor(3,'right','top','left','#9E0031')">
@@ -109,11 +108,6 @@
                 <img v-if="color =='yellow' " src="/images/bars.png" alt="">
                 <img v-if="color =='red' " src="/images/bars.png" alt="">
             </div>
-            <!-- <div class="foot d-flex flex-row justify-content-end">
-                <a href=""><img src="/images/svgs/instagram.svg" alt=""></a>
-                <a href=""><img src="/images/svgs/facebook.svg" alt=""></a>
-                <a href=""><img src="/images/svgs/twitter.svg" alt=""></a>
-            </div> -->
         </div>
     </div>
 </template>
@@ -126,6 +120,8 @@ export default {
   }),
   methods: {
     showhide() {
+      // element = elemento que es mostrado u ocultado cuando la fucion es ejecutada
+      // show = varible de control que permite saber si se oculta o se muestra element
       var element = document.getElementById('showed');
       this.show = !this.show;
       if (this.show) {
@@ -138,6 +134,15 @@ export default {
       }
     },
     changeColor(count, position, positionn1, positionn2,color) {
+      // count = variable que indica cual fue el svg que se hizo click (1= top, 2 = left, right = 3)
+      // active = svg al que se hizo click
+      // position = id del active
+      // nactive1 = primer svg al que no se hizo click
+      // positionn1 = id del primer svg que no se hizo click
+      // nactive2 = segundo svg al que no se hizo click
+      // positionn2 = id del segundo svg que no se hizo click
+      // color = color del active
+      // ncolor = color de nactive1 y nactive2
       var ncolor = '#EAEAEA';
       var description = document.getElementById('description');
       var element = document.getElementById('showed');
@@ -146,7 +151,6 @@ export default {
       var nactive2 = document.getElementById(positionn2);
       var x= 0;
       if (position == 'top') {
-        // console.log(active.childNodes[0].childNodes);
         for (const item of active.childNodes[0].childNodes) {
           if (item.nodeName !== '#text') {
             item.style.fill = color;
@@ -164,7 +168,6 @@ export default {
         }
       }
       else {
-        // console.log(active.childNodes[2].childNodes);
         for (const item of active.childNodes[2].childNodes) {
           if (item.nodeName !== '#text') {
             item.style.fill = color;
@@ -348,50 +351,23 @@ $red-gradient: linear-gradient(to right, #9E0031,#780025);
         position: relative;
     }
     .gradient{
-        // background-image: var(--gradient);
-        // background-size:470%;
-        // transition: background- 0.7s ease;
-        // transition: background-position 0.5s ease;
-        // background:linear-gradient(to right, #124074,#0C2B4E) 50%/ 5em;
-        // animation: blinds 2s infinite;
-        // -webkit-animation: blinds 2s infinite;
         transition: .5s ease all;
 
         &.blue{
             background: $blue-gradient;
             transition: .5s ease all;
-            // background: -webkit-linear-gradient(#124074,#0C2B4E);
-            // background: -moz-linear-gradient(#124074,#0C2B4E);
-            // background: -o-linear-gradient(#124074,#0C2B4E);
-            // background-position: let;
         }
 
         &.yellow{
             background: $yellow-gradient;
             transition: .5s ease all;
-            // background: -webkit-linear-gradient(#F7B32C,#D19725);
-            // background: -moz-linear-gradient(#F7B32C,#D19725);
-            // background: -o-linear-gradient(#F7B32C,#D19725);
-            // background-position: center;
         }
-        
+
         &.red{
             background: $red-gradient;
             transition: .5s ease all;
-            // background: -webkit-linear-gradient(#9E0031,#780025);
-            // background: -moz-linear-gradient(#9E0031,#780025);
-            // background: -o-linear-gradient(#9E0031,#780025);
-            // background-position: right;
         }
     }
-    // @keyframes blinds {
-    //     0%{
-    //         background-image:linear-gradient(to right, #124074,#0C2B4E);
-    //     }
-    //     100% {
-    //         background-image: linear-gradient(to right, #F7B32C, #D19725);
-    //     }
-    // }
     @keyframes change {
         from{
             background: linear-gradient(90deg, #f90 0%, #444 0) 50%/ 5em;
