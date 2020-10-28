@@ -6,13 +6,13 @@
                 <div class="logo" >
                     <svg class="pointer" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 189.4 215.3" style="enable-background:new 0 0 189.4 215.3;" xml:space="preserve">
                     <svg:style type="text/css">
-                      st0{fill:transparent;}
+                      .transparent{fill:transparent;}
                       .st1{fill:#EAEAEA;}
                       .st2{fill:#124074;}
                     </svg:style>
                     <g id="logo-c">
                         <g id="right" @click="changeColor(3,'right','top','left','#9E0031')">
-                            <polygon class="st0" points="189.4,51.4 189.4,162.4 187.3,163.7 97.9,215.3 94.7,215.3 94.7,106.1 187.2,52.7 		"/>
+                            <polygon class="transparent" points="189.4,51.4 189.4,162.4 187.3,163.7 97.9,215.3 94.7,215.3 94.7,106.1 187.2,52.7"/>
                             <g class="paths">
                                 <path id="Path_792" class="st1" d="M148.2,144.9L96.1,175v-25.3l52.7-30.4c1.6-0.9,3.6-0.4,4.5,1.2c0.3,0.5,0.4,1.1,0.4,1.6v13.3
                                     C153.7,139.3,151.6,142.9,148.2,144.9z"/>
@@ -22,7 +22,7 @@
                             </g>
                         </g>
                         <g id="left" @click="changeColor(2,'left','right','top','#F7B32C')">
-                            <polygon class="st0" points="0,51.4 0,162.4 2.2,163.7 91.5,215.3 94.7,215.3 94.7,106.1 2.2,52.7 		"/>
+                            <polygon class="transparent" points="0,51.4 0,162.4 2.2,163.7 91.5,215.3 94.7,215.3 94.7,106.1 2.2,52.7"/>
                             <g class="paths">
                                 <path id="Path_794" class="st1" d="M0.9,55.1C0.3,56.4,0,57.8,0,59.3v14.2C0,77.4,2.1,81,5.5,83l87.9,50.7v-25.3L0.9,55.1z"/>
                                 <path id="Path_795" class="st1" d="M0,101.5v13.3c0,3.9,2.1,7.5,5.5,9.5L93.3,175v-25.3l-88.4-51c-1.6-0.9-3.6-0.4-4.5,1.2

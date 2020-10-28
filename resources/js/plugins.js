@@ -3,3 +3,4 @@
 
 Vue.use(require('vue-moment'))
 // Vue.use(Carousel3d)
+Vue.use(require('svg-vue'))

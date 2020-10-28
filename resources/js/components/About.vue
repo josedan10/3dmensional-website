@@ -36,28 +36,28 @@
                     <div class="w-100">
                             <div class="d-inline-flex flex-column text-center">
                                 <div class="mt-2 mx-4 text-center relative">
-                                    <img src="/images/picture-1.png" alt="">
+                                    <img class="profile-picture" src="/images/picture-1.png" alt="">
                                 </div>
                                 <p class="text-black text-900 name">EDGARDO LÓPEZ</p>
                                 <p class="parraf text-900">CEO/CMO - Directo de Marketing</p>
                             </div>
                             <div class="d-inline-flex flex-column text-center">
                                 <div class="mt-2 mx-4 text-center relative">
-                                    <img src="/images/picture-2.png" alt="">
+                                    <img class="profile-picture" src="/images/picture-2.png" alt="">
                                 </div>
                                 <p class="text-black text-900 name">RAFAEL CALLES</p>
                                 <p class="parraf text-900">Director Creativo</p>
                             </div>
                             <div class="d-inline-flex flex-column text-center">
                                 <div class="mt-2 mx-4 text-center relative">
-                                    <img src="/images/picture-3.png" alt="">
+                                    <img class="profile-picture" src="/images/jose-profile.jpg" alt="">
                                 </div>
                                 <p class="text-black text-900 name">JOSÉ QUINTERO</p>
                                 <p class="parraf text-900">Director de Desarrollo</p>
                             </div>
                             <div class="d-inline-flex flex-column text-center">
                                 <div class="mt-2 mx-4 text-center relative">
-                                    <img src="/images/picture-4.png" alt="">
+                                    <img class="profile-picture" src="/images/picture-4.png" alt="">
                                 </div>
                                 <p class="text-black text-900 name">OSBEL TORRES</p>
                                 <p class="parraf text-900">Director Audiovisual</p>
@@ -70,7 +70,11 @@
         </div>
     </div>
 </template>
-<style lang="scss">
+<style scoped lang="scss">
+    .profile-picture {
+        
+    }
+
     .parraf{
         font-size: 0.7em;
     }
@@ -83,23 +87,17 @@
             font-size: 1.2em;
         }
     }
+
     .d-inline-flex{
         div{
             width: 160px;
         }
-        img{
+
+        img {
             width: 100%;
-            transition: all 0.2s  ease-in-out;
+            transition: all 0.2s ease-in-out;
             border-radius: 50%;
         }
-        img:hover{
-            border: 5px solid black;
-            border-radius: 50%;
-        }
-    }
-    .selected{
-        border: 5px solid black;
-        border-radius: 50%;
     }
     .water-3{
         left: -180px;
