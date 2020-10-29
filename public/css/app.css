@@ -10926,6 +10926,7 @@ a.text-dark:focus {
 html,
 body {
   font-size: 18px;
+  width: 100vw;
 }
 
 @media (max-width: 1200px) {

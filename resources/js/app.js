@@ -29,6 +29,10 @@ Vue.component(
   require('./components/Services.vue').default
 )
 Vue.component(
+  'portfolio-component',
+  require('./components/Portfolio.vue').default
+)
+Vue.component(
   'contacts-component',
   require('./components/Contacts.vue').default
 )

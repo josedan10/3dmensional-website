@@ -100,6 +100,7 @@
         <div id="app" class="content">
             <absolute-component></absolute-component>
             <services-component></services-component>
+            <portfolio-component></portfolio-component>
             <about-component></about-component>
             <contacts-component></contacts-component>
         </div>
