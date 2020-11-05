@@ -1,11 +1,11 @@
 <template>
-    <div class="d-flex justify-content-between container-fluid flex-wrap all">
+    <div class="d-flex justify-content-between container-fluid flex-wrap about-container">
         <div class="header mb-5"></div>
         <div class="container socials-container mt-4 d-flex flex-column justify-content-between">
-            <h2 class="pl-5 ml-5 mb-4 text-black text-900">CONTACTS</h2>
+            <h2 class="pl-5 ml-5 mb-4 text-black text-900">CONTACTO</h2>
             <div class="mt-4 d-flex flex-row">
-                <p class="w-50 text-black">EMAIL</p>
-                <p class="text-black">PHONE</p>
+                <p class="w-50 text-black">CORREO</p>
+                <p class="text-black">TELÉFONO</p>
             </div>
             <div class="contact-info mt-1 d-flex flex-row">
                 <p class="w-50 text-black text-900">contacto@3dmensional.agency</p>
@@ -88,7 +88,8 @@ export default {
         font-size: 1.25rem;
     }
 
-    .all {
+    .about-container {
+        height: 100vh;
         position: relative;
 
         .water-2{
@@ -135,7 +136,7 @@ export default {
                 transform: scale(1,calc(1/1.2));
             }
 
-            path {
+            path, circle {
                 fill: white;
                 transition: all 0.2s ease;
             }

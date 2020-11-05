@@ -2,7 +2,7 @@
     <div class="d-flex justify-content-center container-fluid flex-wrap relative">
         <div class="cont-logo col-xs-12 col-sm-12 col-md-4 col-lg-4  d-flex flex-column justify-content-center">
             <div class="content d-flex flex-column align-items-center">
-                <p class="text-black text-900 f-50">SERVICES</p>
+                <p class="text-black text-900 f-50">SERVICIOS</p>
                 <div class="logo" >
                     <svg class="pointer" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 189.4 215.3" style="enable-background:new 0 0 189.4 215.3;" xml:space="preserve">
                     <svg:style type="text/css">
@@ -48,9 +48,9 @@
             <!-- Main Description -->
             <div id="description" class="description gradient col-sm-8 col-md-12 col-lg-12 px-5" :class="{ yellow: color === 'yellow', red: color === 'red', blue: color === 'blue' }">
                 <!-- Tittle -->
-                <h3 v-if="color == 'blue' " class="mt-5 text-light text-900">DEVELOPMENT</h3>
+                <h3 v-if="color == 'blue' " class="mt-5 text-light text-900">DESARROLLO</h3>
                 <h3 v-if="color == 'yellow' " class="mt-5 text-light text-900">MARKETING</h3>
-                <h3 v-if="color == 'red' " class="mt-5 text-light text-900">DESIGN</h3>
+                <h3 v-if="color == 'red' " class="mt-5 text-light text-900">DISEÑO</h3>
                 <!-- Parraf -->
                 <p v-if="color == 'blue' " class="text-light mt-4 mb-0" style="height: 75%;">Today, companies need technology services tools to reach their customers. Sell their products, manage projects and otimize your business processes.<br>Our team offers comprehensive solutions and digital innovation of any type of proposal with a combination of extensive knowledge and experience in the sector. Where we design and develop customized managment aplications based on the need, interests, comercial activities, human resources, process control and development of custom software. We carry out technological projects adapted to each company or business idea. We analyze each project idea in detail and provide the best solution based on the objetives and needs of our clients.</p>
                 <p v-if="color == 'yellow' " class="text-light mt-4 mb-0" style="height: 75%;"> Currently, the importantce that we give to digital marketing is such that it has become one of the most important departments within the company to analyze the behavior of markets and consumers. With this tool we study your competition understand and analyze your business in order to define the characteristics that make it different, loyalty of current customers, increase in sales with less investment, define your target audience and optimize brand recognition and company reputation to spot opportunities. For this we offer you a digital Marketing service where you can find advice and guidance according to your need when you need it.</p>
