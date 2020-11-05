@@ -6,5 +6,6 @@
 <style lang="scss">
     .watermarks{
         z-index: 1;
+        position: absolute;
     }
 </style>

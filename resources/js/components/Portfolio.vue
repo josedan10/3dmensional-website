@@ -1,7 +1,7 @@
 <template>
     <div
         class="portfolio-container"
-        :style="{backgroundImage: `url(${visibleProjects[activeProjectInd].backgroundImage}`}"
+        :style="{backgroundImage: !isMobileViewport ? `url(${visibleProjects[activeProjectInd].backgroundImage}` : `url(${visibleProjects[activeProjectInd].mobileImg}`}"
     >
         <div
             class="bgImg"
@@ -45,16 +45,8 @@
                 v-for="(project, ind) in visibleProjects"
                 :key="'project-' + ind"
                 :index="ind"
-                :style="{backgroundImage: `url(${visibleProjects[ind].backgroundImage}`}"
-            >
-                <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
-                    <img
-                        :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }"
-                        :data-index="index"
-                        :src="project.backgroundImage"
-                    />
-                </template>
-            </slide>
+                :style="{backgroundImage: `url(${visibleProjects[ind].miniImage}`}"
+            ></slide>
         </carousel-3d>
     </div>
 </template>
@@ -73,6 +65,8 @@ export default {
       {
         name: 'Arte & Estilo Salazar',
         backgroundImage: '/images/projects/arte-y-estilo-salazar-bg.png',
+        miniImage: '/images/projects/arte-y-estilo-salazar-min.png',
+        mobileImg: '/images/projects/arte-y-estilo-salazar-mob.png',
         logo: 'arte-y-estilo-logo',
         categories: ['Marketing', 'Diseño', 'Desarrollo'],
         subCategories: ['Branding empresarial', 'Carpinteria'],
@@ -82,7 +76,9 @@ export default {
       },
       {
         name: 'By Nikole Mendoza',
-        backgroundImage: 'byNikoleMendoza-bg.png',
+        backgroundImage: '/images/projects/byNikoleMendoza-bg.png',
+        miniImage: '/images/projects/byNikoleMendoza-min.png',
+        mobileImg: '/images/projects/byNikoleMendoza-mob.png',
         logo: 'byNikoleMendoza-logo',
         categories: ['Marketing', 'Diseño'],
         colorCondition: 'dark',
@@ -92,7 +88,9 @@ export default {
       },
       {
         name: 'Elion',
-        backgroundImage: 'elion-bg.png',
+        backgroundImage: '/images/projects/elion-bg.png',
+        miniImage: '/images/projects/elion-min.png',
+        mobileImg: '/images/projects/elion-mob.png',
         logo: 'elion-logo',
         categories: ['Marketing', 'Diseño'],
         colorCondition: 'dark',
@@ -102,7 +100,9 @@ export default {
       },
       {
         name: 'Heaven\'s Sweet',
-        backgroundImage: 'heavens-sweet-bg.png',
+        backgroundImage: '/images/projects/heavens-sweet-bg.png',
+        miniImage: '/images/projects/heavens-sweet-min.png',
+        mobileImg: '/images/projects/heavens-sweet-mob.png',
         logo: 'heavens-sweet-logo',
         categories: ['Marketing', 'Diseño'],
         colorCondition: 'light',
@@ -132,6 +132,9 @@ export default {
     visibleProjects: function () {
       const _this = this
       return (_this.categoriesFilter === 'all') ? [..._this.projects] : _this.projects.filter(proj => proj.categories.includes(_this.categoriesFilter))
+    },
+    isMobileViewport () {
+      return window.innerWidth < 600
     }
   },
   mounted () {
@@ -151,6 +154,10 @@ export default {
         min-height: 100vh;
         background-origin: center;
         background-size: cover;
+
+        .project {
+          background-position: center;
+        }
 
         .bgImg {
             position: absolute;

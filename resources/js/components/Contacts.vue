@@ -1,17 +1,17 @@
 <template>
-    <div class="d-flex justify-content-between container-fluid flex-wrap all relative">
+    <div class="d-flex justify-content-between container-fluid flex-wrap all">
         <div class="header mb-5"></div>
-        <div class="container ko mt-4 d-flex flex-column justify-content-between relative">
+        <div class="container socials-container mt-4 d-flex flex-column justify-content-between">
             <h2 class="pl-5 ml-5 mb-4 text-black text-900">CONTACTS</h2>
             <div class="mt-4 d-flex flex-row">
                 <p class="w-50 text-black">EMAIL</p>
                 <p class="text-black">PHONE</p>
             </div>
-            <div class="mt-1 d-flex flex-row">
-                <p class="w-50 text-black text-900">contacto@3dmensional_agency</p>
+            <div class="contact-info mt-1 d-flex flex-row">
+                <p class="w-50 text-black text-900">contacto@3dmensional.agency</p>
                 <p class="text-black text-900">+584241131116</p>
             </div>
-            <div class="d-flex flex-row justify-content-center align-items-end h-100">
+            <div class="d-flex flex-row justify-content-center align-items-end h-100 mt-5">
                 <div
                     v-for="(social, ind) in socialNetworks"
                     :key="ind + '-social'"
@@ -78,35 +78,33 @@ export default {
     $instagram: #EE4B7A;
     $twitter: #34CCFE;
     $whatsapp: #5EFA75;
-    .header{
+    .header {
         height:50px;
         width: 100%;
         margin-top: 20px;
     }
-    .relative{
+
+    .contact-info {
+        font-size: 1.25rem;
+    }
+
+    .all {
         position: relative;
-    }
-    .absolute{
-        position: absolute;
-    }
-    .ko{
-        height: calc((100% - 70px) - (4.5rem));
-        .water-1{
-            right: 90px;
-            top: 100px;
-        }
-    }
-    .all{
-        height: 100vh;
 
         .water-2{
             right: -240px;
             bottom: 50px;
         }
     }
-    
+
     p{
         margin: 0;
+    }
+
+    .socials-container {
+        padding-bottom: 0;
+        max-width: 1200px;
+        position: relative;
     }
 
     .rrss {

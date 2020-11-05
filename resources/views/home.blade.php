@@ -14,8 +14,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -24,7 +23,6 @@
         html, body {
             background-color: #fff;
             color: #636b6f;
-            font-family: 'Nunito', sans-serif;
             font-weight: 200;
             height: 100vh;
             margin: 0;
@@ -42,8 +40,6 @@
         body{
             background-color:#fff;
             margin: 0px;
-            /* height: 100%; */
-            overflow-x: hidden;
         }
 
         main {
@@ -98,7 +94,7 @@
 
     <main>
         <div id="app" class="content">
-            <absolute-component></absolute-component>
+            <nav-component></nav-component>
             <services-component></services-component>
             <portfolio-component></portfolio-component>
             <about-component></about-component>

@@ -40,10 +40,7 @@ Vue.component(
   "contacts-component",
   require("./components/Contacts.vue").default
 )
-Vue.component(
-  "absolute-component",
-  require("./components/Absolute.vue").default
-)
+Vue.component("nav-component", require("./components/Nav.vue").default)
 Vue.component(
   "watermark-component",
   require("./components/Watermarks.vue").default

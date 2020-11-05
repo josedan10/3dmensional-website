@@ -10907,6 +10907,7 @@ html,
 body {
   font-size: 18px;
   width: 100vw;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 @media (max-width: 1200px) {
@@ -10914,5 +10915,10 @@ body {
   body {
     font-size: 16px;
   }
+}
+
+b,
+strong {
+  font-weight: bold !important;
 }
 
