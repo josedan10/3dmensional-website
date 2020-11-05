@@ -1,15 +1,15 @@
 <template>
-    <div class="d-flex justify-content-between container-fluid flex-wrap about-container">
+    <div id="contacto" class="d-flex justify-content-between container-fluid flex-wrap about-container">
         <div class="header mb-5"></div>
         <div class="container socials-container mt-4 d-flex flex-column justify-content-between">
-            <h2 class="pl-5 ml-5 mb-4 text-black text-900">CONTACTO</h2>
+            <h2 class="pl-5 ml-5 mb-4  text-900">CONTACTO</h2>
             <div class="mt-4 d-flex flex-row">
-                <p class="w-50 text-black">CORREO</p>
-                <p class="text-black">TELÉFONO</p>
+                <p class="w-50 ">CORREO</p>
+                <p class="">TELÉFONO</p>
             </div>
             <div class="contact-info mt-1 d-flex flex-row">
-                <p class="w-50 text-black text-900">contacto@3dmensional.agency</p>
-                <p class="text-black text-900">+584241131116</p>
+                <p class="w-50  text-900">contacto@3dmensional.agency</p>
+                <p class=" text-900">+584241131116</p>
             </div>
             <div class="d-flex flex-row justify-content-center align-items-end h-100 mt-5">
                 <div

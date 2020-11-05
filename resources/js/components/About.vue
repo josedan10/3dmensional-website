@@ -1,22 +1,22 @@
 <template>
-    <div class="d-flex justify-content-between container-fluid all flex-wrap relative">
+    <div id="nosotros" class="d-flex justify-content-between container-fluid all flex-wrap relative">
         <div class="header"></div>
         <div class="container about-container mt-5 mb-4 d-flex flex-column relative">
             <div class="d-flex flex-row justify-content-between container">
                 <div class="w-50">
-                    <h2 class="text-center w-100 text-black text-900 mb-3">SOBRE NOSOTROS</h2>
+                    <h2 class="text-center w-100  text-900 mb-3">SOBRE NOSOTROS</h2>
                 </div>
             </div>
 
             <div class="content">
-                <p class="parraf text-black">En <strong>3Dmensional</strong> como agencia digital sabemos lo complicado que puede ser materializar un pensamiento, pero con la dirección correcta es posible hacerlo realidad.</p>
-                <p class="parraf text-black">Cada proyecto en el que podemos trabajar es una oportunidad para hacer algo diferente. Creemos que cada idea es importante, es por eso que nuestro propósito es brindarle una atención completamente personalizada que lo guíe en el desarrollo que proyecta a corto, mediano y largo plazo.</p>
-                <p class="parraf text-black">Nuestro entorno de trabajo lo hemos dividido en tres dimensiones principales:</p>
+                <p class="parraf ">En <strong>3Dmensional</strong> como agencia digital sabemos lo complicado que puede ser materializar un pensamiento, pero con la dirección correcta es posible hacerlo realidad.</p>
+                <p class="parraf ">Cada proyecto en el que podemos trabajar es una oportunidad para hacer algo diferente. Creemos que cada idea es importante, es por eso que nuestro propósito es brindarle una atención completamente personalizada que lo guíe en el desarrollo que proyecta a corto, mediano y largo plazo.</p>
+                <p class="parraf ">Nuestro entorno de trabajo lo hemos dividido en tres dimensiones principales:</p>
 
                 <img src="/images/svgs/3Dmensional-dimensions.svg" alt="3Dmensional services, marketing, desarrollo, diseño. Agencia de marketing profesional" />
 
-                <p class="parraf text-black">En cada uno de estos servicios contamos con un equipo capacitado y dedicado, cuyo objetivo es ofrecerle el mejor asesoramiento y atención para que tu proyecto y sueños sean realidad. buscamos enfocarnos en todo lo que es verdadero, todo lo que es honorable, todo lo que es puro, todo lo hermoso y todo lo admirable para plasmarlo y poder transmitir y crear cosas excelentes.</p>
-                <p class="parraf text-black">No vemos un proyecto como un trabajo sino como una oportunidad para crear arte con nuestros talentos, porque nos apasiona lo que hacemos.</p>
+                <p class="parraf ">En cada uno de estos servicios contamos con un equipo capacitado y dedicado, cuyo objetivo es ofrecerle el mejor asesoramiento y atención para que tu proyecto y sueños sean realidad. buscamos enfocarnos en todo lo que es verdadero, todo lo que es honorable, todo lo que es puro, todo lo hermoso y todo lo admirable para plasmarlo y poder transmitir y crear cosas excelentes.</p>
+                <p class="parraf ">No vemos un proyecto como un trabajo sino como una oportunidad para crear arte con nuestros talentos, porque nos apasiona lo que hacemos.</p>
             </div>
 
             <div class="pictures-container d-flex flex-row justify-content-between container mt-4">
@@ -24,28 +24,28 @@
                     <div class="mt-2 mx-4 text-center relative">
                         <img class="profile-picture" src="/images/picture-1.png" alt="">
                     </div>
-                    <p class="text-black text-900 name">EDGARDO LÓPEZ</p>
+                    <p class=" text-900 name">EDGARDO LÓPEZ</p>
                     <p class="parraf">Director de Marketing</p>
                 </div>
                 <div class="d-inline-flex picture-card flex-column text-center">
                     <div class="mt-2 mx-4 text-center relative">
                         <img class="profile-picture" src="/images/jose-profile.jpg" alt="">
                     </div>
-                    <p class="text-black text-900 name">JOSÉ QUINTERO</p>
+                    <p class=" text-900 name">JOSÉ QUINTERO</p>
                     <p class="parraf">Director de Desarrollo</p>
                 </div>
                 <div class="d-inline-flex picture-card flex-column text-center">
                     <div class="mt-2 mx-4 text-center relative">
                         <img class="profile-picture" src="/images/picture-2.png" alt="">
                     </div>
-                    <p class="text-black text-900 name">RAFAEL CALLES</p>
+                    <p class=" text-900 name">RAFAEL CALLES</p>
                     <p class="parraf">Director Creativo</p>
                 </div>
                 <div class="d-inline-flex picture-card flex-column text-center">
                     <div class="mt-2 mx-4 text-center relative">
                         <img class="profile-picture" src="/images/picture-4.png" alt="">
                     </div>
-                    <p class="text-black text-900 name">OSBEL TORRES</p>
+                    <p class=" text-900 name">OSBEL TORRES</p>
                     <p class="parraf">Director Audiovisual</p>
                 </div>
             </div>

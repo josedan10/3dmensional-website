@@ -1,8 +1,8 @@
 <template>
-    <div class="d-flex justify-content-center container-fluid flex-wrap relative">
+    <div id="servicios" class="d-flex justify-content-center container-fluid flex-wrap relative">
         <div class="cont-logo col-xs-12 col-sm-12 col-md-4 col-lg-4  d-flex flex-column justify-content-center">
             <div class="content d-flex flex-column align-items-center">
-                <p class="text-black text-900 f-50">SERVICIOS</p>
+                <p class=" text-900 f-50">SERVICIOS</p>
                 <div class="logo" >
                     <svg class="pointer" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 189.4 215.3" style="enable-background:new 0 0 189.4 215.3;" xml:space="preserve">
                     <svg:style type="text/css">

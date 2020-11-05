@@ -4,11 +4,29 @@
             <div class="head">
                 <img src="/images/svgs/3dmensional-logo.svg" alt="">
             </div>
-            <img class="bars" src="/images/svgs/bars.svg" alt="">
+
+            <ul class="menu-wrapper">
+                <li class="menu-item"><a @click="setActiveLink" class="menu-link active" href="#inicio">INICIO</a></li>
+                <li class="menu-item"><a @click="setActiveLink" class="menu-link" href="#nosotros">NOSOTROS</a></li>
+                <li class="menu-item"><a @click="setActiveLink" class="menu-link" href="#proyectos">PROYECTOS</a></li>
+                <li class="menu-item"><a @click="setActiveLink" class="menu-link" href="#servicios">SERVICIOS</a></li>
+                <li class="menu-item"><a @click="setActiveLink" class="menu-link" href="#contacto">CONTACTO</a></li>
+            </ul>
         </nav>
-        <p class="text-black text-900 language">EN</p>
+        <p class=" text-900 language">EN</p>
     </div>
 </template>
+<script>
+export default {
+    data: () => ({}),
+    methods: {
+        setActiveLink (e) {
+            document.querySelector('.menu-link.active').classList.toggle('active')
+            e.target.classList.toggle('active')
+        }
+    }
+}
+</script>
 <style lang="scss">
     .navbar{
         position: fixed;
@@ -21,6 +39,54 @@
         align-items: center;
         padding: 1.75rem 2.25rem;
         background: rgba(255, 255, 255, 0.9);
+
+        .menu-wrapper {
+            display: flex;
+            list-style: none;
+
+            .menu-item {
+                padding: 1rem 2rem;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #8e8f93;
+                    font-weight: bold;
+                    position: relative;
+
+                    &:hover {
+                        text-decoration: none;
+
+                        &::after {
+                            width: 100%;
+                            transition: width .2s ease;
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -5px;
+                        height: 4px;
+                        background: #8e8f93;
+                        width: 0;
+                        transition: width .2s ease;
+                    }
+
+                    &.active {
+                        color:#2a2d34;
+
+                        &::after {
+                            background: #2a2d34;
+                            width: 100%;
+                        }
+                    }
+
+                }
+            }
+
+        }
     }
 
     .bars{

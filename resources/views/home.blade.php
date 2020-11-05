@@ -27,7 +27,7 @@
             height: 100vh;
             margin: 0;
         }
-        .text-black{
+        .{
             color: #000;
         }
         .text-900{   

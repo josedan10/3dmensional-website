@@ -1,7 +1,8 @@
 <template>
     <div
-        class="portfolio-container"
-        :style="{backgroundImage: !isMobileViewport ? `url(${visibleProjects[activeProjectInd].backgroundImage}` : `url(${visibleProjects[activeProjectInd].mobileImg}`}"
+      id="proyectos"
+      class="portfolio-container"
+      :style="{backgroundImage: !isMobileViewport ? `url(${visibleProjects[activeProjectInd].backgroundImage}` : `url(${visibleProjects[activeProjectInd].mobileImg}`}"
     >
         <div
             class="bgImg"

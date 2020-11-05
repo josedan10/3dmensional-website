@@ -10903,11 +10903,16 @@ a.text-dark:focus {
   }
 }
 
+* {
+  color: #2a2d34;
+}
+
 html,
 body {
   font-size: 18px;
   width: 100vw;
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  color: #2a2d34;
 }
 
 @media (max-width: 1200px) {
