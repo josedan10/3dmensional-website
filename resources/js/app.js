@@ -6,11 +6,15 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap')
+// Insert plugins
 
-window.Vue = require('vue')
+import vuetify from "./plugins/vuetify.js"
+window.Vue = require("vue")
 
-require('./plugins.js')
+require("./bootstrap")
+
+require("./plugins.js")
+require("./admin.js")
 
 /**
  * The following block of code may be used to automatically register your
@@ -23,28 +27,28 @@ require('./plugins.js')
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('loader-component', require('./components/Loader.vue').default)
+Vue.component("loader-component", require("./components/Loader.vue").default)
 Vue.component(
-  'services-component',
-  require('./components/Services.vue').default
+  "services-component",
+  require("./components/Services.vue").default
 )
 Vue.component(
-  'portfolio-component',
-  require('./components/Portfolio.vue').default
+  "portfolio-component",
+  require("./components/Portfolio.vue").default
 )
 Vue.component(
-  'contacts-component',
-  require('./components/Contacts.vue').default
+  "contacts-component",
+  require("./components/Contacts.vue").default
 )
 Vue.component(
-  'absolute-component',
-  require('./components/Absolute.vue').default
+  "absolute-component",
+  require("./components/Absolute.vue").default
 )
 Vue.component(
-  'watermark-component',
-  require('./components/Watermarks.vue').default
+  "watermark-component",
+  require("./components/Watermarks.vue").default
 )
-Vue.component('about-component', require('./components/About.vue').default)
+Vue.component("about-component", require("./components/About.vue").default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -53,5 +57,6 @@ Vue.component('about-component', require('./components/About.vue').default)
  */
 
 const app = new Vue({
-  el: '#app'
+  el: "#app",
+  vuetify,
 })
