@@ -22,6 +22,15 @@ html, body {
     }
 }
 
+#app {
+    overflow-x: hidden;
+}
+
 b, strong {
     font-weight: bold !important;
+}
+
+.section-title {
+    font-size: 2.75rem;
+    font-weight: bold;
 }

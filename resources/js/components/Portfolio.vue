@@ -1,67 +1,31 @@
 <template>
     <div
       id="proyectos"
-      class="portfolio-container"
-      :style="{backgroundImage: !isMobileViewport ? `url(${visibleProjects[activeProjectInd].backgroundImage}` : `url(${visibleProjects[activeProjectInd].mobileImg}`}"
+      class="portfolio"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="20"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
     >
+      <h1 class="section-title mb-3">ELLOS CREYERON EN NOSOTROS</h1>
+      <div class="projects-container">
         <div
-            class="bgImg"
-        ></div>
-
-        <!-- Categories filters -->
-        <div class="categories">
-            <button
-                class="category"
-                :class="{
-                    active: categoriesFilter === category,
-                    light: visibleProjects[activeProjectInd].colorCondition === 'light',
-                    dark: visibleProjects[activeProjectInd].colorCondition === 'dark'
-                }"
-                v-for="(category, ind) in categories"
-                :key="'category-' + ind"
-                @click="categoriesFilter = category"
-            >{{category.toUpperCase()}}</button>
-            <button
-                class="category"
-                :class="{
-                    active: categoriesFilter === 'all',
-                    light: visibleProjects[activeProjectInd].colorCondition === 'light',
-                    dark: visibleProjects[activeProjectInd].colorCondition === 'dark'
-                }"
-                @click="categoriesFilter = 'all'"
-            >TODOS LOS PROYECTOS</button>
-        </div>
-
-        <!-- Carousel -->
-        <carousel-3d
-            class="projects-container"
-            ref="projectsCarousel"
-            @after-slide-change="slideChange"
-            :border="0"
-            height="400"
-            width="500"
+          v-for="(project, ind) in projects"
+          :key="'project-' + ind"
+          class="project"
         >
-            <slide
-                class="project"
-                v-for="(project, ind) in visibleProjects"
-                :key="'project-' + ind"
-                :index="ind"
-                :style="{backgroundImage: `url(${visibleProjects[ind].miniImage}`}"
-            ></slide>
-        </carousel-3d>
+          <img :src="project.miniImage" :alt="project.description" class="project-img">
+        </div>
+      </div>
     </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    categories: [
-      'Marketing',
-      'Desarrollo',
-      'Diseño'
-    ],
-    activeProjectInd: 0,
-    categoriesFilter: 'all',
     projects: [
       {
         name: 'Arte & Estilo Salazar',
@@ -144,70 +108,30 @@ export default {
 </script>
 
 <style lang="scss">
-    .portfolio-container {
-        position: relative;
-        padding: 80px;
-        width: 100%;
+
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 2rem;
+      max-width: 1200px;
+
+      .project {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-column: span 3;
         justify-content: center;
-        min-height: 100vh;
-        background-origin: center;
-        background-size: cover;
+        align-items: center;
 
-        .project {
-          background-position: center;
+        .project-img {
+          width: 100%;
+          filter: grayscale(100%);
         }
-
-        .bgImg {
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-origin: center;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-        }
-
-        .categories {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            margin-bottom: 30px;
-
-            .category {
-                color: transparent;
-                font-size: 1.875rem;
-                background: none;
-                border: none;
-                outline: none;
-                font-weight: bold;
-                -webkit-text-stroke-width: 0.7px;
-                transition: all .3s ease;
-
-                &.dark {
-                    -webkit-text-stroke-color: rgb(204, 204, 204);
-
-                    &.active {
-                        color: white;
-                        transition: all .3s ease;
-                    }
-                }
-
-                &.light {
-                    -webkit-text-stroke-color: rgb(70, 70, 70);
-
-                    &.active {
-                        color: rgb(29, 29, 29);
-                        transition: all .3s ease;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 </style>

@@ -1,10 +1,20 @@
 <template>
-    <div id="nosotros" class="d-flex justify-content-between container-fluid all flex-wrap relative">
+    <div
+        id="nosotros"
+        class="d-flex justify-content-between container-fluid all flex-wrap relative"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="20"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+    >
         <div class="header"></div>
         <div class="container about-container mt-5 mb-4 d-flex flex-column relative">
-            <div class="d-flex flex-row justify-content-between container">
+            <div class="d-flex flex-row justify-content-between">
                 <div class="w-50">
-                    <h2 class="text-center w-100  text-900 mb-3">SOBRE NOSOTROS</h2>
+                    <h1 class="section-title mb-3">SOBRE NOSOTROS</h1>
                 </div>
             </div>
 
@@ -20,28 +30,60 @@
             </div>
 
             <div class="pictures-container d-flex flex-row justify-content-between container mt-4">
-                <div class="d-inline-flex picture-card flex-column text-center">
+                <div class="d-inline-flex picture-card flex-column text-center"
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-offset="-100"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div class="mt-2 mx-4 text-center relative">
                         <img class="profile-picture" src="/images/picture-1.png" alt="">
                     </div>
                     <p class=" text-900 name">EDGARDO LÓPEZ</p>
                     <p class="parraf">Director de Marketing</p>
                 </div>
-                <div class="d-inline-flex picture-card flex-column text-center">
+                <div class="d-inline-flex picture-card flex-column text-center"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    data-aos-offset="-100"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div class="mt-2 mx-4 text-center relative">
                         <img class="profile-picture" src="/images/jose-profile.jpg" alt="">
                     </div>
                     <p class=" text-900 name">JOSÉ QUINTERO</p>
                     <p class="parraf">Director de Desarrollo</p>
                 </div>
-                <div class="d-inline-flex picture-card flex-column text-center">
+                <div class="d-inline-flex picture-card flex-column text-center"
+                    data-aos="fade-up"
+                    data-aos-delay="450"
+                    data-aos-offset="-100"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div class="mt-2 mx-4 text-center relative">
                         <img class="profile-picture" src="/images/picture-2.png" alt="">
                     </div>
                     <p class=" text-900 name">RAFAEL CALLES</p>
                     <p class="parraf">Director Creativo</p>
                 </div>
-                <div class="d-inline-flex picture-card flex-column text-center">
+                <div class="d-inline-flex picture-card flex-column text-center"
+                    data-aos="fade-up"
+                    data-aos-delay="600"
+                    data-aos-offset="-100"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div class="mt-2 mx-4 text-center relative">
                         <img class="profile-picture" src="/images/picture-4.png" alt="">
                     </div>
@@ -56,6 +98,7 @@
 <style scoped lang="scss">
     .about-container {
         max-width: 1200px;
+        min-height: 100vh;
 
         .content {
             margin-bottom: 2rem;
@@ -77,7 +120,7 @@
         border-radius: 10px;
         padding: 2rem;
         background: #fff;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 10px rgba(42, 45, 52, 0.3);
         min-width: 200px;
         margin-bottom: 20px;
 

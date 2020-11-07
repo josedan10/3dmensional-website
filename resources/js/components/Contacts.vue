@@ -1,8 +1,8 @@
 <template>
-    <div id="contacto" class="d-flex justify-content-between container-fluid flex-wrap about-container">
+<div id="contacto" class="d-flex justify-content-between container-fluid flex-wrap about-container">
         <div class="header mb-5"></div>
         <div class="container socials-container mt-4 d-flex flex-column justify-content-between">
-            <h2 class="pl-5 ml-5 mb-4  text-900">CONTACTO</h2>
+            <h1 class="section-title mb-4">CONTACTO</h1>
             <div class="mt-4 d-flex flex-row">
                 <p class="w-50 ">CORREO</p>
                 <p class="">TELÉFONO</p>
@@ -89,7 +89,6 @@ export default {
     }
 
     .about-container {
-        height: 100vh;
         position: relative;
 
         .water-2{

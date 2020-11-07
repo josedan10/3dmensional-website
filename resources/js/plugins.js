@@ -1,6 +1,10 @@
 /* eslint-disable no-undef */
-import Carousel3d from 'vue-carousel-3d'
+import AOS from "aos"
+import "aos/dist/aos.css" // You can also use <link> for styles
 
-Vue.use(require('vue-moment'))
-Vue.use(Carousel3d)
-Vue.use(require('svg-vue'))
+Vue.use(require("vue-moment"))
+Vue.use(require("svg-vue"))
+Vue.use(require("vue-scrollto"))
+
+// ..
+AOS.init()

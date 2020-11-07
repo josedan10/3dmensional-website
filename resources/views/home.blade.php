@@ -95,9 +95,10 @@
     <main>
         <div id="app" class="content">
             <nav-component></nav-component>
+            <home-component></home-component>
+            <about-component></about-component>
             <services-component></services-component>
             <portfolio-component></portfolio-component>
-            <about-component></about-component>
             <contacts-component></contacts-component>
         </div>
     </main>

@@ -6,11 +6,11 @@
             </div>
 
             <ul class="menu-wrapper">
-                <li class="menu-item"><a @click="setActiveLink" class="menu-link active" href="#inicio">INICIO</a></li>
-                <li class="menu-item"><a @click="setActiveLink" class="menu-link" href="#nosotros">NOSOTROS</a></li>
-                <li class="menu-item"><a @click="setActiveLink" class="menu-link" href="#proyectos">PROYECTOS</a></li>
-                <li class="menu-item"><a @click="setActiveLink" class="menu-link" href="#servicios">SERVICIOS</a></li>
-                <li class="menu-item"><a @click="setActiveLink" class="menu-link" href="#contacto">CONTACTO</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#inicio'" class="menu-link active" href="#inicio">INICIO</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#nosotros'" class="menu-link" href="#nosotros">NOSOTROS</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#servicios'" class="menu-link" href="#servicios">SERVICIOS</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#proyectos'" class="menu-link" href="#proyectos">PROYECTOS</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#contacto'" class="menu-link" href="#contacto">CONTACTO</a></li>
             </ul>
         </nav>
         <p class=" text-900 language">EN</p>

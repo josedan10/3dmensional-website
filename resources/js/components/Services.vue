@@ -1,13 +1,25 @@
 <template>
-    <div id="servicios" class="d-flex justify-content-center container-fluid flex-wrap relative">
-        <div class="cont-logo col-xs-12 col-sm-12 col-md-4 col-lg-4  d-flex flex-column justify-content-center">
-            <div class="content d-flex flex-column align-items-center">
-                <p class=" text-900 f-50">SERVICIOS</p>
+    <div
+      id="servicios"
+      class="services-container d-flex justify-content-center container-fluid flex-wrap relative"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="20"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+    >
+        <div class="content col-xs-12 col-12 d-flex justify-content-center align-items-center">
+            <div class="cont-logo d-flex flex-column align-items-center">
+                <p
+                  class="section-title mb-3"
+                >SERVICIOS</p>
                 <div class="logo" >
                     <svg class="pointer" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 189.4 215.3" style="enable-background:new 0 0 189.4 215.3;" xml:space="preserve">
                     <svg:style type="text/css">
                       .transparent{fill:transparent;}
-                      .st1{fill:#EAEAEA;}
+                      .st1{fill:#2a2d34}
                       .st2{fill:#124074;}
                     </svg:style>
                     <g id="logo-c">
@@ -39,74 +51,14 @@
                         </g>
                     </g>
                     </svg>
-                    <p  class="text-center text-900 mt-2">CLICK</p>
                 </div>
             </div>
-        </div>
-        <!-- DESCTRIPTION CONTAINER (Main description and hidden description) -->
-        <div class="cont-description d-flex col-sm-12 col-md-5 col-lg-4">
-            <!-- Main Description -->
-            <div id="description" class="description gradient col-sm-8 col-md-12 col-lg-12 px-5" :class="{ yellow: color === 'yellow', red: color === 'red', blue: color === 'blue' }">
-                <!-- Tittle -->
-                <h3 v-if="color == 'blue' " class="mt-5 text-light text-900">DESARROLLO</h3>
-                <h3 v-if="color == 'yellow' " class="mt-5 text-light text-900">MARKETING</h3>
-                <h3 v-if="color == 'red' " class="mt-5 text-light text-900">DISEÑO</h3>
-                <!-- Parraf -->
-                <p v-if="color == 'blue' " class="text-light mt-4 mb-0" style="height: 75%;">Today, companies need technology services tools to reach their customers. Sell their products, manage projects and otimize your business processes.<br>Our team offers comprehensive solutions and digital innovation of any type of proposal with a combination of extensive knowledge and experience in the sector. Where we design and develop customized managment aplications based on the need, interests, comercial activities, human resources, process control and development of custom software. We carry out technological projects adapted to each company or business idea. We analyze each project idea in detail and provide the best solution based on the objetives and needs of our clients.</p>
-                <p v-if="color == 'yellow' " class="text-light mt-4 mb-0" style="height: 75%;"> Currently, the importantce that we give to digital marketing is such that it has become one of the most important departments within the company to analyze the behavior of markets and consumers. With this tool we study your competition understand and analyze your business in order to define the characteristics that make it different, loyalty of current customers, increase in sales with less investment, define your target audience and optimize brand recognition and company reputation to spot opportunities. For this we offer you a digital Marketing service where you can find advice and guidance according to your need when you need it.</p>
-                <p v-if="color == 'red' " class="text-light mt-4 mb-0" style="height: 75%;">Graphic design is a fundamental tool to be able to create, comunicated and capture your messages or ideas. It starts from the logo to your business stationery, trough it's advertising, business cards, web pages, and social networks. <br> Thats is why we have a design team to give a correct identity image to your brand, capturing your vision trough the eyes and expressing your ideas trough the image, color, shape, typography and technical techniques know as theory. At design 3Dmensional we offer the best advice and cration of an attractive brand image that stands out for consumers.</p>
-                <!-- Button to show hidden description -->
-                <div class="pointer d-flex flex-column align-items-end" @click="showhide()">
-                    <p class="text-light text-900 m-0">MORE</p>
-                    <div class="more"></div>
-                </div>
-
-            </div>
-            <!-- Hidden Description -->
-            <div class="application gradient hidden blue col-sm-6 col-md-9 col-lg-10 d-flex flex-column align-items-end pt-4 pr-2" id="showed" >
-                <!-- Hidden Description Limiter -->
-                <div v-if=" color == 'blue' " class="d-flex flex-column align-items-start col-sm-7 col-md-7 text-light">
-                    <p>Desarrollo Web.</p>
-                    <p>Apps.</p>
-                    <p>Softwares.</p>
-                    <p>Multiplataformas.</p>
-                    <p>Sistemas de administración.</p>
-                    <p>Mantenimiento de plataformas.</p>
-                    <p>Desarrollo e implemetación de base de datos.</p>
-                    <p>Administración de servidores.</p>
-                    <p>eComerce</p>
-                    <p>Sistema de educación online.</p>
-                </div>
-                <div v-if=" color == 'yellow' " class="d-flex flex-column align-items-start col-sm-7 col-md-7 text-light">
-                    <p>SEO / SEM.</p>
-                    <p>Posicionamiento en buscadores.</p>
-                    <p>Marketing online.</p>
-                    <p>RRSS.</p>
-                    <p>Community Manager.</p>
-                    <p>Publicidad ADS</p>
-                    <p>Email marketing.</p>
-                </div>
-                <div v-if=" color == 'red' " class="d-flex flex-column align-items-start col-sm-7 col-md-7 text-light">
-                    <p>Diseño de marca.</p>
-                    <p>Branding.</p>
-                    <p>Packing.</p>
-                    <p>RRSS.</p>
-                    <p>Flyers y Anuncios.</p>
-                    <p>Gigantografía.</p>
-                    <p>Imprenta.</p>
-                    <p>Diseño 3D.</p>
-                    <p>Diseño Web.</p>
-                    <p>Diseño de aplicaciones móviles UI/UX.</p>
-                    <p>Motion graphics.</p>
-                    <p>Diseño editorial.</p>
-                </div>
-            </div>
-        </div>
-        <div class="cont-figure col-md-3 col-lg-4 d-flex flex-column justify-content-center">
-            <div class="content d-flex flex-column align-items-center">
-                <img v-if="color =='blue' " src="/images/svgs/square.svg" alt="">
-                <img v-if="color =='yellow' " src="/images/bars.png" alt="">
-                <img v-if="color =='red' " src="/images/bars.png" alt="">
+            <div
+              class="info-card"
+              :class="{ development: selectedIndex === 0, marketing: selectedIndex === 1, design: selectedIndex === 2}"
+            >
+                <div class="area-title">{{ areas[selectedIndex] }}</div>
+                <div class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate id, neque earum dolores, sunt mollitia consequuntur reiciendis vero excepturi sequi commodi distinctio ipsum provident nulla obcaecati magni sint doloribus.</div>
             </div>
         </div>
     </div>
@@ -116,24 +68,26 @@ export default {
   data: () => ({
     show: false,
     color: 'blue',
-    count:1
+    count: 1,
+    selectedIndex: 0,
+    areas: ['Desarrollo', 'Marketing', 'Diseño']
   }),
   methods: {
-    showhide() {
+    showhide () {
       // element = elemento que es mostrado u ocultado cuando la fucion es ejecutada
       // show = varible de control que permite saber si se oculta o se muestra element
-      var element = document.getElementById('showed');
-      this.show = !this.show;
+      var element = document.getElementById('showed')
+      this.show = !this.show
       if (this.show) {
-        element.classList.add('show');
+        element.classList.add('show')
         element.classList.remove('hidden')
       }
       if (!this.show) {
-        element.classList.add('hidden');
-        element.classList.remove('show');
+        element.classList.add('hidden')
+        element.classList.remove('show')
       }
     },
-    changeColor(count, position, positionn1, positionn2,color) {
+    changeColor (count, position, positionn1, positionn2, color) {
       // count = variable que indica cual fue el svg que se hizo click (1= top, 2 = left, right = 3)
       // active = svg al que se hizo click
       // position = id del active
@@ -143,87 +97,88 @@ export default {
       // positionn2 = id del segundo svg que no se hizo click
       // color = color del active
       // ncolor = color de nactive1 y nactive2
-      var ncolor = '#EAEAEA';
-      var description = document.getElementById('description');
-      var element = document.getElementById('showed');
-      var active = document.getElementById(position);
-      var nactive1 = document.getElementById(positionn1);
-      var nactive2 = document.getElementById(positionn2);
-      var x= 0;
+      var ncolor = '#2a2d34'
+      var description = document.getElementById('description')
+      var element = document.getElementById('showed')
+      var active = document.getElementById(position)
+      var nactive1 = document.getElementById(positionn1)
+      var nactive2 = document.getElementById(positionn2)
+      var x = 0
       if (position == 'top') {
         for (const item of active.childNodes[0].childNodes) {
           if (item.nodeName !== '#text') {
-            item.style.fill = color;
+            item.style.fill = color
           }
         }
         for (const iterator of nactive1.childNodes[2].childNodes) {
           if (iterator.nodeName !== '#text') {
-            iterator.style.fill = ncolor;
+            iterator.style.fill = ncolor
           }
         }
         for (const iterator of nactive2.childNodes[2].childNodes) {
           if (iterator.nodeName !== '#text') {
-            iterator.style.fill = ncolor;
+            iterator.style.fill = ncolor
           }
         }
-      }
-      else {
+      } else {
         for (const item of active.childNodes[2].childNodes) {
           if (item.nodeName !== '#text') {
-            item.style.fill = color;
+            item.style.fill = color
           }
         }
-        if (positionn1 == 'top') { 
+        if (positionn1 == 'top') {
           for (const iterator of nactive1.childNodes[0].childNodes) {
             if (iterator.nodeName !== '#text') {
-              iterator.style.fill = ncolor;
+              iterator.style.fill = ncolor
             }
           }
           for (const iterator of nactive2.childNodes[2].childNodes) {
             if (iterator.nodeName !== '#text') {
-              iterator.style.fill = ncolor;
+              iterator.style.fill = ncolor
             }
           }
-        }
-        else {
+        } else {
           for (const iterator of nactive1.childNodes[2].childNodes) {
             if (iterator.nodeName !== '#text') {
-              iterator.style.fill = ncolor;
+              iterator.style.fill = ncolor
             }
           }
           for (const iterator of nactive2.childNodes[0].childNodes) {
             if (iterator.nodeName !== '#text') {
-              iterator.style.fill = ncolor;
+              iterator.style.fill = ncolor
             }
           }
         }
       }
       if (count === 1) {
-        this.color = 'blue';
-        description.classList.remove('yellow');
-        element.classList.remove('yellow');
-        description.classList.remove('red');
-        element.classList.remove('red');
-        description.classList.add('blue');
-        element.classList.add('blue');
+        this.color = 'blue'
+        this.selectedIndex = 0
+        description.classList.remove('yellow')
+        element.classList.remove('yellow')
+        description.classList.remove('red')
+        element.classList.remove('red')
+        description.classList.add('blue')
+        element.classList.add('blue')
       }
       if (count === 2) {
-        this.color = 'yellow';
-        description.classList.remove('red');
-        element.classList.remove('red');
-        description.classList.remove('blue');
-        element.classList.remove('blue');
-        description.classList.add('yellow');
-        element.classList.add('yellow');
+        this.color = 'yellow'
+        this.selectedIndex = 1
+        description.classList.remove('red')
+        element.classList.remove('red')
+        description.classList.remove('blue')
+        element.classList.remove('blue')
+        description.classList.add('yellow')
+        element.classList.add('yellow')
       }
       if (count === 3) {
-        this.color = 'red';
-        description.classList.remove('blue');
-        element.classList.remove('blue');
-        description.classList.remove('yellow');
-        element.classList.remove('yellow');
-        description.classList.add('red');
-        element.classList.add('red');
+        this.color = 'red'
+        this.selectedIndex = 2
+        description.classList.remove('blue')
+        element.classList.remove('blue')
+        description.classList.remove('yellow')
+        element.classList.remove('yellow')
+        description.classList.add('red')
+        element.classList.add('red')
       }
     }
   },
@@ -236,6 +191,10 @@ export default {
 $blue-gradient: linear-gradient(to right, #124074,#0C2B4E);
 $yellow-gradient: linear-gradient(to right, #F7B32C,#D19725);
 $red-gradient: linear-gradient(to right, #9E0031,#780025);
+
+$developmentColor: #124074;
+$marketingColor: #F7B32C;
+$designColor: #9E0031;
 
 // Var Gradient
 
@@ -254,9 +213,20 @@ $red-gradient: linear-gradient(to right, #9E0031,#780025);
 // Helper Class
 
 // Custom Styles
+
+.services-container {
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+.logo {
+  width: 100%;
+}
     .cont-logo, .cont-figure{
-        height:100vh;
-        z-index: 1;
+      min-width: 300px;
+      margin-right: 100px;
+      z-index: 1;
+
         .head{
             height:50px;
             margin-top: 20px;
@@ -294,79 +264,32 @@ $red-gradient: linear-gradient(to right, #9E0031,#780025);
     .pointer{
         cursor: pointer;
     }
-    .cont-description{
-            // 124074
-            // 0C2B4E
-        height:95vh;
-        z-index: 2;
-        position: relative;
-        transition: all 0.5s;
-
-        .description{
-            border-radius: 0px 0px 15px 15px;
-            z-index: 2;
-            width: 100%;
-        }
-        .application{
-            position:absolute;
-            border-radius: 0px 0px 15px 15px;
-            height:93%;
-            transition: all 0.5s;
-            p{
-                margin-bottom: 0.5rem;
-            }
-        }
-    }
     #right:hover{
         .paths{
             path{
-                fill:#9E0031;
+                fill: $designColor;
             }
         }
     }
     #top:hover{
         .paths{
             path{
-                fill:#124074;
+                fill: $developmentColor;
             }
         }
     }
     #left:hover{
         .paths{
             path{
-                fill:#F7B32C;
+                fill: $marketingColor;
             }
         }
     }
     svg .paths path{
         transition: 0.3s all ease;
     }
-    .more{
-        height: 8px;
-        width: 22px;
-        background:white;
-        border-radius: 0px 3px 3px 0px;
-    }
     .relative{
         position: relative;
-    }
-    .gradient{
-        transition: .5s ease all;
-
-        &.blue{
-            background: $blue-gradient;
-            transition: .5s ease all;
-        }
-
-        &.yellow{
-            background: $yellow-gradient;
-            transition: .5s ease all;
-        }
-
-        &.red{
-            background: $red-gradient;
-            transition: .5s ease all;
-        }
     }
     @keyframes change {
         from{
@@ -375,6 +298,68 @@ $red-gradient: linear-gradient(to right, #9E0031,#780025);
         to {
             background: linear-gradient(90deg, #f90 100%, #444 0);
         }
+    }
+
+    //  Content card
+    .info-card {
+      border-radius: 1rem;
+      box-shadow: 0 10px 10px rgb(42, 45, 52, 0.3);
+      min-height: 300px;
+      width: 70%;
+      max-width: 700px;
+      padding: 2rem;
+
+      .area-title {
+        font-weight: bold;
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          height: 5px;
+          width: 50px;
+        }
+      }
+
+      .description {
+        margin-top: 30px;
+        font-size: 1.125rem;
+      }
+
+      &.development {
+        .area-title {
+          color: $developmentColor;
+
+          &::after {
+            background-color: $developmentColor;
+          }
+        }
+      }
+
+      &.design {
+        .area-title {
+          color: $designColor;
+
+          &::after {
+            background-color: $designColor;
+          }
+        }
+      }
+
+      &.marketing {
+        .area-title {
+          color: $marketingColor;
+
+          &::after {
+            background-color: $marketingColor;
+          }
+        }
+      }
     }
 
 </style>
