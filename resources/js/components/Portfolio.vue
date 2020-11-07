@@ -3,14 +3,14 @@
       id="proyectos"
       class="portfolio"
       data-aos="fade-up"
-      data-aos-offset="200"
+      data-aos-offset="-200"
       data-aos-delay="20"
       data-aos-duration="500"
       data-aos-easing="ease-in-out"
       data-aos-once="false"
       data-aos-anchor-placement="top-center"
     >
-      <h1 class="section-title mb-3">ELLOS CREYERON EN NOSOTROS</h1>
+      <h1 class="section-title mb-5">ELLOS CREYERON EN NOSOTROS</h1>
       <div class="projects-container">
         <div
           v-for="(project, ind) in projects"
@@ -30,7 +30,7 @@ export default {
       {
         name: 'Arte & Estilo Salazar',
         backgroundImage: '/images/projects/arte-y-estilo-salazar-bg.png',
-        miniImage: '/images/projects/arte-y-estilo-salazar-min.png',
+        miniImage: '/images/projects/arte-y-estilo-salazar-logo.svg',
         mobileImg: '/images/projects/arte-y-estilo-salazar-mob.png',
         logo: 'arte-y-estilo-logo',
         categories: ['Marketing', 'Diseño', 'Desarrollo'],
@@ -42,7 +42,7 @@ export default {
       {
         name: 'By Nikole Mendoza',
         backgroundImage: '/images/projects/byNikoleMendoza-bg.png',
-        miniImage: '/images/projects/byNikoleMendoza-min.png',
+        miniImage: '/images/projects/byNikoleMendoza-logo.svg',
         mobileImg: '/images/projects/byNikoleMendoza-mob.png',
         logo: 'byNikoleMendoza-logo',
         categories: ['Marketing', 'Diseño'],
@@ -54,7 +54,7 @@ export default {
       {
         name: 'Elion',
         backgroundImage: '/images/projects/elion-bg.png',
-        miniImage: '/images/projects/elion-min.png',
+        miniImage: '/images/projects/elion-logo.svg',
         mobileImg: '/images/projects/elion-mob.png',
         logo: 'elion-logo',
         categories: ['Marketing', 'Diseño'],
@@ -66,7 +66,7 @@ export default {
       {
         name: 'Heaven\'s Sweet',
         backgroundImage: '/images/projects/heavens-sweet-bg.png',
-        miniImage: '/images/projects/heavens-sweet-min.png',
+        miniImage: '/images/projects/heavens-sweet-logo.svg',
         mobileImg: '/images/projects/heavens-sweet-mob.png',
         logo: 'heavens-sweet-logo',
         categories: ['Marketing', 'Diseño'],
@@ -118,7 +118,7 @@ export default {
     .projects-container {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-gap: 2rem;
+      grid-gap: 4rem;
       max-width: 1200px;
 
       .project {
@@ -129,7 +129,7 @@ export default {
 
         .project-img {
           width: 100%;
-          filter: grayscale(100%);
+          // filter: grayscale(100%);
         }
       }
     }

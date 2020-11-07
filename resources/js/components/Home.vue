@@ -81,6 +81,8 @@ export default {
         width: 100vw;
         display: flex;
         align-items: center;
+        background: url("/images/home-bg.svg");
+        background-size: cover;
 
         .wrapper {
             max-width: 1200px;
