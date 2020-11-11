@@ -14,6 +14,7 @@
 
     {{-- SEO --}}
     <link rel="icon" href="{{ asset('favicon.ico') }}">
+    @include('includes.meta-seo')
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

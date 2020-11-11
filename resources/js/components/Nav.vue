@@ -2,7 +2,7 @@
     <div class="menu">
         <nav class="navbar">
             <a v-smooth-scroll href="#inicio" class="head">
-                <img src="/images/svgs/3dmensional-logo.svg" alt="3Dmensional Agency Logo">
+                <img src="/images/svgs/3dmensional-logo.svg" alt="3Dmensional Agency Logo" title="3Dmensional Agency Logo">
             </a>
 
             <ul class="menu-wrapper">
