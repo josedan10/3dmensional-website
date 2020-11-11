@@ -9,28 +9,74 @@
 
 * {
     color: #2a2d34;
+    box-sizing: border-box;
 }
 
 html, body {
     font-size: 18px;
+    font-weight: 300;
     width: 100vw;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     color: #2a2d34;
+
+    background-color: #fff;
 
     @media (max-width: 1200px) {
         font-size: 16px;
     }
 }
 
-#app {
+body {
     overflow-x: hidden;
+
+    // background images
+    background-image:   url('/images/objetivo-bg.svg'),
+                        url('/images/imaginacion-bg.svg'),
+                        url('/images/grandeza-bg.svg'),
+                        url('/images/sueños-bg.svg'),
+                        url('/images/vision-bg.svg'),
+                        url('/images/innovar-bg.svg'),
+                        url('/images/futuro-bg.svg'),
+                        url('/images/camino-bg.svg');
+    
+    background-size:    400px auto,
+                        500px auto,
+                        400px auto,
+                        400px auto,
+                        500px auto,
+                        400px auto,
+                        400px auto,
+                        400px auto;
+
+    background-position:    10% 32%,
+                            90% 23%,
+                            30% 43%,
+                            60% 52%,
+                            5% 60%,
+                            95% 67%,
+                            40% 82%,
+                            60% 90%;
+
+    @media only screen and (max-width: 1200px) {
+        padding: 0 4rem;
+    }
+
+    @media only screen and (max-width: 992px) {
+
+    }
 }
 
 b, strong {
     font-weight: bold !important;
 }
 
-.section-title {
-    font-size: 2.75rem;
-    font-weight: bold;
+section {
+    padding: 7rem 2rem 2rem;
+    min-height: 100vh;
+    position: relative;
+
+    .section-title {
+        font-size: 2.75rem;
+        font-weight: bold;
+    }
 }

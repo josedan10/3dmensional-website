@@ -11,8 +11,6 @@
 import vuetify from "./plugins/vuetify.js"
 window.Vue = require("vue")
 
-require("./bootstrap")
-
 require("./plugins.js")
 require("./admin.js")
 
@@ -27,6 +25,7 @@ require("./admin.js")
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+Vue.component("nav-component", require("./components/Nav.vue").default)
 Vue.component("loader-component", require("./components/Loader.vue").default)
 Vue.component("home-component", require("./components/Home.vue").default)
 Vue.component(
@@ -40,11 +39,6 @@ Vue.component(
 Vue.component(
   "contacts-component",
   require("./components/Contacts.vue").default
-)
-Vue.component("nav-component", require("./components/Nav.vue").default)
-Vue.component(
-  "watermark-component",
-  require("./components/Watermarks.vue").default
 )
 Vue.component("about-component", require("./components/About.vue").default)
 

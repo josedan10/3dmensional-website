@@ -1,7 +1,7 @@
 <template>
-    <div
-      id="proyectos"
-      class="portfolio"
+    <section
+      id="clientes"
+      class="portfolio d-flex flex-direction-column justify-content-center"
       data-aos="fade-up"
       data-aos-offset="-200"
       data-aos-delay="20"
@@ -17,10 +17,10 @@
           :key="'project-' + ind"
           class="project"
         >
-          <img :src="project.miniImage" :alt="project.description" class="project-img">
+          <b-img-lazy blank="true" blankColor="#fff" :src="project.miniImage" :alt="project.description" class="project-img"></b-img-lazy>
         </div>
       </div>
-    </div>
+    </section>
 </template>
 
 <script>

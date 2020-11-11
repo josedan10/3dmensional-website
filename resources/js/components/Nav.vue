@@ -1,30 +1,77 @@
 <template>
     <div class="menu">
         <nav class="navbar">
-            <div class="head">
-                <img src="/images/svgs/3dmensional-logo.svg" alt="">
-            </div>
+            <a v-smooth-scroll href="#inicio" class="head">
+                <img src="/images/svgs/3dmensional-logo.svg" alt="3Dmensional Agency Logo">
+            </a>
 
             <ul class="menu-wrapper">
-                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#inicio'" class="menu-link active" href="#inicio">INICIO</a></li>
-                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#nosotros'" class="menu-link" href="#nosotros">NOSOTROS</a></li>
-                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#servicios'" class="menu-link" href="#servicios">SERVICIOS</a></li>
-                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#proyectos'" class="menu-link" href="#proyectos">PROYECTOS</a></li>
-                <li class="menu-item"><a @click="setActiveLink" v-scroll-to="'#contacto'" class="menu-link" href="#contacto">CONTACTO</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-smooth-scroll class="menu-link active" href="#inicio">INICIO</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-smooth-scroll class="menu-link" href="#servicios">SERVICIOS</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-smooth-scroll class="menu-link" href="#clientes">CLIENTES</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-smooth-scroll class="menu-link" href="#nosotros">NOSOTROS</a></li>
+                <li class="menu-item"><a @click="setActiveLink" v-smooth-scroll class="menu-link" href="#contacto">CONTACTO</a></li>
             </ul>
         </nav>
-        <p class=" text-900 language">EN</p>
     </div>
 </template>
 <script>
 export default {
-    data: () => ({}),
-    methods: {
-        setActiveLink (e) {
-            document.querySelector('.menu-link.active').classList.toggle('active')
-            e.target.classList.toggle('active')
-        }
+  data: () => ({}),
+  methods: {
+    setActiveLink (e) {
+      document.querySelector('.menu-link.active').classList.toggle('active')
+      e.target.classList.toggle('active')
+    },
+    handleActiveLink () {
+      const navbar = document.querySelector('.navbar')
+      const positionY = window.scrollY
+      const maxScroll = 30
+
+      // Shadow on scroll
+      if (positionY > maxScroll && !navbar.classList.contains('shadow')) {
+        navbar.classList.add('shadow')
+      } else if (positionY <= maxScroll && navbar.classList.contains('shadow')) {
+        navbar.classList.remove('shadow')
+      }
+
+      // Set active section
+      const home = document.getElementById('inicio')
+      const about = document.getElementById('nosotros')
+      const services = document.getElementById('servicios')
+      const clients = document.getElementById('clientes')
+      const contact = document.getElementById('contacto')
+
+      // Links
+      const homeLink = document.querySelector('.menu-link[href="#inicio"]')
+      const aboutLink = document.querySelector('.menu-link[href="#nosotros"]')
+      const clientsLink = document.querySelector('.menu-link[href="#clientes"]')
+      const servicesLink = document.querySelector('.menu-link[href="#servicios"]')
+      const contactLink = document.querySelector('.menu-link[href="#contacto"]')
+
+      if (positionY >= contact.offsetTop && !contactLink.classList.contains('active')) {
+        document.querySelector('.menu-link.active').classList.remove('active')
+        contactLink.classList.add('active')
+      } else if (positionY >= about.offsetTop && positionY < contact.offsetTop && !aboutLink.classList.contains('active')) {
+        document.querySelector('.menu-link.active').classList.remove('active')
+        aboutLink.classList.add('active')
+      } else if (positionY >= clients.offsetTop && positionY < about.offsetTop && !clientsLink.classList.contains('active')) {
+        document.querySelector('.menu-link.active').classList.remove('active')
+        clientsLink.classList.add('active')
+      } else if (positionY >= services.offsetTop && positionY < clients.offsetTop && !servicesLink.classList.contains('active')) {
+        document.querySelector('.menu-link.active').classList.remove('active')
+        servicesLink.classList.add('active')
+      } else if (positionY >= home.offsetTop && positionY < services.offsetTop && !homeLink.classList.contains('active')) {
+        document.querySelector('.menu-link.active').classList.remove('active')
+        homeLink.classList.add('active')
+      }
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleActiveLink)
+
+    this.handleActiveLink()
+  }
 }
 </script>
 <style lang="scss">
@@ -37,15 +84,22 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.75rem 2.25rem;
-        background: rgba(255, 255, 255, 0.9);
+        padding: 1.75rem;
+        transition: all .5s ease;
+
+        &.shadow {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            transition: all .5s ease;
+        }
 
         .menu-wrapper {
             display: flex;
             list-style: none;
+            margin-bottom: 0;
 
             .menu-item {
-                padding: 1rem 2rem;
+                padding: 0.5rem 2rem;
 
                 a {
                     display: flex;
@@ -95,21 +149,19 @@ export default {
         height: 40px;
     }
     .language{
-        bottom: 25px;
-        left: 2.25rem;
+        bottom: 1.75rem;
+        left: 1.75rem;
         position: fixed;
         cursor: pointer;
         z-index: 100;
     }
     .head{
-        height:50px;
         top: 0;
         left: 0;
         z-index: 10;
 
         img{
-            width: auto;
-            height:100%;
+            width: 250px;
         }
     }
 </style>

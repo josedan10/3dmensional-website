@@ -1,7 +1,7 @@
 <template>
-    <div
+    <section
       id="servicios"
-      class="services-container d-flex justify-content-center container-fluid flex-wrap relative"
+      class="services-container"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-delay="20"
@@ -10,16 +10,19 @@
       data-aos-once="false"
       data-aos-anchor-placement="top-center"
     >
+      <div class="wrapper">
+        <h1
+          class="section-title mb-3"
+        >SERVICIOS</h1>
+        <div class="page-description mt-2 mb-5" v-html="description"></div>
+
         <div class="content col-xs-12 col-12 d-flex justify-content-center align-items-center">
             <div class="cont-logo d-flex flex-column align-items-center">
-                <p
-                  class="section-title mb-3"
-                >SERVICIOS</p>
                 <div class="logo" >
                     <svg class="pointer" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 189.4 215.3" style="enable-background:new 0 0 189.4 215.3;" xml:space="preserve">
                     <svg:style type="text/css">
                       .transparent{fill:transparent;}
-                      .st1{fill:#2a2d34}
+                      .st1{fill:#eaeaea}
                       .st2{fill:#124074;}
                     </svg:style>
                     <g id="logo-c">
@@ -55,13 +58,14 @@
             </div>
             <div
               class="info-card"
-              :class="{ development: selectedIndex === 0, marketing: selectedIndex === 1, design: selectedIndex === 2}"
+              :class="{ development: selectedIndex === 0, marketing: selectedIndex === 1, design: selectedIndex === 2 }"
             >
-                <div class="area-title">{{ areas[selectedIndex] }}</div>
-                <div class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cupiditate id, neque earum dolores, sunt mollitia consequuntur reiciendis vero excepturi sequi commodi distinctio ipsum provident nulla obcaecati magni sint doloribus.</div>
+              <div class="area-title">{{ areas[selectedIndex] }}</div>
+              <div class="description" v-html="areasContent.filter(area => area.name === areas[selectedIndex])[0].content"></div>
             </div>
         </div>
-    </div>
+      </div>
+    </section>
 </template>
 <script>
 export default {
@@ -70,7 +74,22 @@ export default {
     color: 'blue',
     count: 1,
     selectedIndex: 0,
-    areas: ['Desarrollo', 'Marketing', 'Diseño']
+    areas: ['desarrollo', 'marketing', 'diseño'],
+    description: '<p>Somos una <b>Agencia Digital</b> con el propósito de ofrecer soluciones innovadoras y creativas para impulsar, diseñar y construir tus sueños. Ofrecemos <b>servicios B2B, B2C</b> para proyectos, marca personal Startups, PyMEs, empresas nacionales y corporativas globales de cualquier sector.</p><p>En <b>3Dmensional</b> ponemos a tu disposición todos nuestros servicios y brindamos el mejor asesoramiento según tus necesidades.</p>',
+    areasContent: [
+      {
+        name: 'desarrollo',
+        content: '<p>Cada día la <b>presencia online</b> es imprescindible para cualquier tipo de proyecto o negocio, <b>el mundo digital evoluciona constantemente</b> y es usado como una herramienta para tener mayor alcance y visibilidad. </p><p>Las empresas necesitan herramientas tecnológicas para llegar a sus clientes, vender sus productos, gestionar proyectos y optimizar tiempo y disminuir los gastos. </p><p>En <b>3Dmensional desarrollamos y diseñamos software</b> para que puedas tener a la mano las mejores herramientas que permitan tu crecimiento de una manera más rápida.</p>'
+      },
+      {
+        name: 'marketing',
+        content: '<p>El <b>Marketing Digital</b> es una de las herramientas de estrategias fundamentales si quieres <b>aumentar tu presencia y visibilidad en el mundo digital</b>.</p><p>Esto se logra mediante la aplicación de estrategias que permitan dar a conocer tus productos o servicios mediante canales digitales y así ganar posicionamiento, reputación de marca, captación y fidelización de clientes, y aumento de número de clientes con <b>estrategias y embudos de ventas</B>.</p><p>En <b>3Dmensional</b> nuestro objetivo es que seas un referente en tu mercado, dejando huella en el producto o servicio que ofreces, mediante estrategias previamente estudiadas y planificadas acordes a tu marca que te diferencien de la competencia y posicione dentro del mercado Digital.</p>'
+      },
+      {
+        name: 'diseño',
+        content: '<p>El <b>Diseño</b> es una de las herramientas fundamentales para <b>crear y representar gráficamente esa idea o mensaje que deseas comunicar</b></p><p>Actualmente todo se proyecta y representanta visualmente. En función de los elementos gráficos de un mensaje, lo primero que el público capta es clave para despertar interés.</p><p>En <b>3Dmensional</b> te ayudamos a crear y diseñar de la mano de nuestro staff creativo y audiovisual, para dar esa imagen visual atractiva que <b>impulse tu marca y destaque entre la competencia</B>.</p>'
+      }
+    ]
   }),
   methods: {
     showhide () {
@@ -81,7 +100,7 @@ export default {
       if (this.show) {
         element.classList.add('show')
         element.classList.remove('hidden')
-      }
+      } 
       if (!this.show) {
         element.classList.add('hidden')
         element.classList.remove('show')
@@ -97,8 +116,7 @@ export default {
       // positionn2 = id del segundo svg que no se hizo click
       // color = color del active
       // ncolor = color de nactive1 y nactive2
-      var ncolor = '#2a2d34'
-      var description = document.getElementById('description')
+      var ncolor = '#eaeaea'
       var element = document.getElementById('showed')
       var active = document.getElementById(position)
       var nactive1 = document.getElementById(positionn1)
@@ -153,31 +171,22 @@ export default {
       if (count === 1) {
         this.color = 'blue'
         this.selectedIndex = 0
-        description.classList.remove('yellow')
         element.classList.remove('yellow')
-        description.classList.remove('red')
         element.classList.remove('red')
-        description.classList.add('blue')
         element.classList.add('blue')
       }
       if (count === 2) {
         this.color = 'yellow'
         this.selectedIndex = 1
-        description.classList.remove('red')
         element.classList.remove('red')
-        description.classList.remove('blue')
         element.classList.remove('blue')
-        description.classList.add('yellow')
         element.classList.add('yellow')
       }
       if (count === 3) {
         this.color = 'red'
         this.selectedIndex = 2
-        description.classList.remove('blue')
         element.classList.remove('blue')
-        description.classList.remove('yellow')
         element.classList.remove('yellow')
-        description.classList.add('red')
         element.classList.add('red')
       }
     }
@@ -215,8 +224,36 @@ $designColor: #9E0031;
 // Custom Styles
 
 .services-container {
-  padding: 3rem;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .wrapper {
+    max-width: 1200px;
+    position: relative;
+    z-index: 10;
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .page-description {
+    font-size: 1.125rem;
+                  
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .objetivo-bg {
+    position: absolute;
+    width: 400px;
+    z-index: 1;
+  }
 }
 
 .logo {
@@ -304,10 +341,14 @@ $designColor: #9E0031;
     .info-card {
       border-radius: 1rem;
       box-shadow: 0 10px 10px rgb(42, 45, 52, 0.3);
-      min-height: 300px;
+      height: 300px;
       width: 70%;
       max-width: 700px;
+      overflow-y: auto;
       padding: 2rem;
+      position: relative;
+      z-index: 2;
+      background-color: #fff;
 
       .area-title {
         font-weight: bold;
@@ -329,6 +370,10 @@ $designColor: #9E0031;
       .description {
         margin-top: 30px;
         font-size: 1.125rem;
+
+          p {
+            margin-bottom: 1rem;
+          }
       }
 
       &.development {

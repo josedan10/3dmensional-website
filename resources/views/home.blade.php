@@ -21,77 +21,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-        .{
-            color: #000;
-        }
-        .text-900{   
-            font-weight: 900;
-        }
-        .f-50{
-            font-size: 2.3rem;
-        }
-
-        body{
-            background-color:#fff;
-            margin: 0px;
-        }
-
-        main {
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-
-        #app {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-        .content{
-            width:100%;
-        }
-
-        .animation {
-            background-color:#fff;
-            width:100%;
-            height:100%;
-            display:block;
-            overflow: hidden;
-            transform: translate3d(0,0,0);
-            text-align: center;
-            opacity: 1;
-        }
-
-        .animation-mob {
-            display: none;
-        }
-
-        @media (max-width: 576px) {
-            .animation-mob {
-                display: block;
-            }
-
-            .animation-mob svg {
-                height: auto !important;
-                width: 100% !important;
-            }
-
-            .animation {
-                display: none;
-            }
-        }
-
-    </style>
 </head>
 <body>
 
@@ -99,9 +28,9 @@
         <div id="app" class="content">
             <nav-component></nav-component>
             <home-component></home-component>
-            <about-component></about-component>
             <services-component></services-component>
             <portfolio-component></portfolio-component>
+            <about-component></about-component>
             <contacts-component></contacts-component>
         </div>
     </main>

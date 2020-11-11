@@ -79,11 +79,12 @@ Brindar a las PYMES del sector de venta de comidas preparadas un servicio que pu
 
 **Desarrollo**
 - Semana 1: Bot de telegram.
-- Semana 2: Plataforma para gestionar los productos, notificaciones y mensajes de los clientes.
-- Semana 3: Configuración del servidor en DO, desarrollo de la página del producto (landing page).
-- Semana 4: Desarrollo del bot de Whatsapp.
-- Semana 5: Desarrollo del bot de Instagram.
-- Semana 6: Configuración de respaldos automáticos y métricas de la plataforma.
+- Semana 2, 3: Plataforma para gestionar los productos, notificaciones y mensajes de los clientes.
+- Semana 4: Configuración del servidor en DO, desarrollo de la página del producto (landing page).
+- Semana 5: Prueba del bot.
+- Semana 6: Desarrollo del bot de Whatsapp.
+- Semana 7: Desarrollo del bot de Instagram.
+- Semana 8: Configuración de respaldos automáticos y métricas de la plataforma.
 
 **Diseño y producción audiovisual**
 - Semana 1: Diseño de la imagen del producto y diseño de la página del producto.

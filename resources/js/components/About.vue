@@ -1,5 +1,5 @@
 <template>
-    <div
+    <section
         id="nosotros"
         class="d-flex justify-content-between container-fluid all flex-wrap relative"
         data-aos="fade-up"
@@ -10,7 +10,6 @@
         data-aos-once="false"
         data-aos-anchor-placement="top-center"
     >
-        <div class="header"></div>
         <div class="container about-container mt-5 mb-4 d-flex flex-column relative">
             <div class="d-flex flex-row justify-content-between">
                 <div class="w-50">
@@ -19,14 +18,26 @@
             </div>
 
             <div class="content">
-                <p class="parraf ">En <strong>3Dmensional</strong> como agencia digital sabemos lo complicado que puede ser materializar un pensamiento, pero con la dirección correcta es posible hacerlo realidad.</p>
-                <p class="parraf ">Cada proyecto en el que podemos trabajar es una oportunidad para hacer algo diferente. Creemos que cada idea es importante, es por eso que nuestro propósito es brindarle una atención completamente personalizada que lo guíe en el desarrollo que proyecta a corto, mediano y largo plazo.</p>
+                <p class="parraf ">En <strong>3Dmensional</strong> como <b>agencia digital</b> sabemos lo complicado que puede ser materializar un pensamiento, pero con la dirección correcta es posible hacerlo realidad.</p>
+                <p class="parraf ">Cada proyecto en el que podemos trabajar es una oportunidad para hacer algo diferente. Creemos que <b>cada idea es importante</b>, es por eso que nuestro propósito es brindarle una <b>atención completamente personalizada</b> que lo guíe en el desarrollo que proyecta a corto, mediano y largo plazo.</p>
                 <p class="parraf ">Nuestro entorno de trabajo lo hemos dividido en tres dimensiones principales:</p>
 
                 <img src="/images/svgs/3Dmensional-dimensions.svg" alt="3Dmensional services, marketing, desarrollo, diseño. Agencia de marketing profesional" />
 
-                <p class="parraf ">En cada uno de estos servicios contamos con un equipo capacitado y dedicado, cuyo objetivo es ofrecerle el mejor asesoramiento y atención para que tu proyecto y sueños sean realidad. buscamos enfocarnos en todo lo que es verdadero, todo lo que es honorable, todo lo que es puro, todo lo hermoso y todo lo admirable para plasmarlo y poder transmitir y crear cosas excelentes.</p>
-                <p class="parraf ">No vemos un proyecto como un trabajo sino como una oportunidad para crear arte con nuestros talentos, porque nos apasiona lo que hacemos.</p>
+                <p class="parraf ">En cada uno de estos servicios <b>contamos con un equipo capacitado y dedicado</b>, cuyo objetivo es ofrecerle el mejor asesoramiento y atención para que su proyecto pueda llevarse acabo. <b>Siempre damos una milla extra</b> a fin de poder incluso superar las expectativas de nuestros clientes.</p>
+                <p class="parraf ">No vemos un proyecto como un trabajo sino como una oportunidad para <b>crear arte con nuestros talentos, porque nos apasiona lo que hacemos</b>.</p>
+                <h4 class="mb-3">Siempre buscamos diferenciarnos a través de: </h4>
+
+                <p class="parraf">
+                    <ul>
+                        <li data-content="1">Importancia en los detalles.⁣⁣</li>
+                        <li data-content="2">Soluciones personalizadas.</li>
+                        <li data-content="3">Planificación de estrategias.⁣⁣</li>
+                        <li data-content="4">Enfoques por objetivos.</li>
+                        <li data-content="5">Un crecimiento independiente.</li>
+                    </ul>
+                </p>
+
             </div>
 
             <div class="pictures-container d-flex flex-row justify-content-between container mt-4">
@@ -40,9 +51,9 @@
                     data-aos-anchor-placement="top-center"
                 >
                     <div class="mt-2 mx-4 text-center relative">
-                        <img class="profile-picture" src="/images/picture-1.png" alt="">
+                        <b-img-lazy blank="true" blankColor="#eaeaea" class="profile-picture" src="/images/picture-1.png" alt="3Dmensional Director de Marketing, Douglas López"></b-img-lazy>
                     </div>
-                    <p class=" text-900 name">EDGARDO LÓPEZ</p>
+                    <p class="name">EDGARDO LÓPEZ</p>
                     <p class="parraf">Director de Marketing</p>
                 </div>
                 <div class="d-inline-flex picture-card flex-column text-center"
@@ -55,9 +66,9 @@
                     data-aos-anchor-placement="top-center"
                 >
                     <div class="mt-2 mx-4 text-center relative">
-                        <img class="profile-picture" src="/images/jose-profile.jpg" alt="">
+                        <b-img-lazy blank="true" blankColor="#eaeaea" class="profile-picture" src="/images/jose-profile.jpg" alt="3Dmensional Director de Desarrollo, José Quintero (josedan10)"></b-img-lazy>
                     </div>
-                    <p class=" text-900 name">JOSÉ QUINTERO</p>
+                    <p class="name">JOSÉ QUINTERO</p>
                     <p class="parraf">Director de Desarrollo</p>
                 </div>
                 <div class="d-inline-flex picture-card flex-column text-center"
@@ -70,9 +81,9 @@
                     data-aos-anchor-placement="top-center"
                 >
                     <div class="mt-2 mx-4 text-center relative">
-                        <img class="profile-picture" src="/images/picture-2.png" alt="">
+                        <b-img-lazy blank="true" blankColor="#eaeaea" class="profile-picture" src="/images/picture-2.png" alt="3Dmensional Director de Marketing, Rafael Calles"></b-img-lazy>
                     </div>
-                    <p class=" text-900 name">RAFAEL CALLES</p>
+                    <p class="name">RAFAEL CALLES</p>
                     <p class="parraf">Director Creativo</p>
                 </div>
                 <div class="d-inline-flex picture-card flex-column text-center"
@@ -85,15 +96,14 @@
                     data-aos-anchor-placement="top-center"
                 >
                     <div class="mt-2 mx-4 text-center relative">
-                        <img class="profile-picture" src="/images/picture-4.png" alt="">
+                        <b-img-lazy blank="true" blankColor="#eaeaea" class="profile-picture" src="/images/picture-4.png" alt="3Dmensional Director de Marketing, Samuel Torres"></b-img-lazy>
                     </div>
-                    <p class=" text-900 name">OSBEL TORRES</p>
+                    <p class="name">SAMUEL TORRES</p>
                     <p class="parraf">Director Audiovisual</p>
                 </div>
             </div>
-            <watermark-component class="water-3"></watermark-component>
         </div>
-    </div>
+    </section>
 </template>
 <style scoped lang="scss">
     .about-container {
@@ -108,6 +118,31 @@
 
             img {
                 margin-bottom: 2rem;
+            }
+
+            ul {
+                list-style: none;
+                padding-left: 2rem;
+                font-size: 1.125rem;
+
+                li {
+                    position: relative;
+                    margin-bottom: 1rem;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #2a2d34;
+                        height: 7px;
+                        width: 7px;
+                        color: #fff;
+                        left: -15px;
+                        top: 12px;
+                    }
+                }
             }
         }
     }
@@ -126,10 +161,11 @@
 
         .name {
             margin-top: 1rem;
+            font-weight: bold;
         }
 
         .parraf {
-            font-size: 0.75rem;
+            font-size: 1.125rem;
             margin-bottom: 1rem;
             font-weight: 500;
         }
@@ -138,7 +174,6 @@
     .parraf {
         font-size: 1.125rem;
         margin-bottom: 1rem;
-        font-weight: 300;
     }
 
     .justify-content-end{

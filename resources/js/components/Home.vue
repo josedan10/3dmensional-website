@@ -1,5 +1,5 @@
 <template>
-    <div
+    <section
         id="inicio"
         class="home-container"
     >
@@ -11,10 +11,10 @@
                 :class="{ enter: ind === enterSlideIndex, exit: ind === exitSlideIndex }"
             >
                 <h1 class="title">{{ slide.title }}</h1>
-                <p>{{ slide.description }}</p>
+                <div class="description" v-html="slide.description"></div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -25,15 +25,15 @@ export default {
     slides: [
       {
         title: 'Creamos',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        description: '<p>Construimos, diseñamos y llevamos a cabo tus ideas y sueños.</p><p> No hay imposibles.</p>'
       },
       {
         title: 'Impactamos',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        description: '<p>Te ayudamos a impulsar y mejorar tu presencia digital.</p><p> No te quedes atrás.</p>'
       },
       {
         title: 'Consolidamos',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+        description: '<p>Nos involucramos en tu proyecto al máximo.</p><p> Tu éxito es nuestro éxito.</p>'
       }
     ]
   }),
@@ -45,7 +45,7 @@ export default {
       } else {
         this.exitSlideIndex = this.enterSlideIndex
       }
-      setTimeout(() => { this.enterSlideIndex = ++this.enterSlideIndex % this.slides.length }, 1000)
+      setTimeout(() => { this.enterSlideIndex = ++this.enterSlideIndex % this.slides.length }, 1500)
     }
   },
   mounted () {
@@ -58,20 +58,20 @@ export default {
     // Animations
     @keyframes enterAnimation {
         from {
-            transform: translateX(200px);
+            transform: translateX(30%);
             opacity: 0;
         } to {
-            transform: translateX(0);
+            transform: translateX(-120%);
             opacity: 1;
         }
     }
 
     @keyframes exitAnimation {
         from {
-            transform: translateX(0);
+            transform: translateX(-120%);
             opacity: 1;
         } to {
-            transform: translateX(-200px);
+            transform: translateX(-170%);
             opacity: 0;
         }
     }
@@ -82,7 +82,9 @@ export default {
         display: flex;
         align-items: center;
         background: url("/images/home-bg.svg");
-        background-size: cover;
+        background-size: 75% auto;
+        background-repeat: no-repeat;
+        background-position: center;
 
         .wrapper {
             max-width: 1200px;
@@ -92,19 +94,28 @@ export default {
             .slide {
                 opacity: 0;
                 position: absolute;
+                min-width: 400px;
 
                 .title {
                     text-transform: uppercase;
                     font-weight: bold;
-                    font-size: 2.75rem;
+                    font-size: 3.5rem;
+                }
+
+                .description {
+                  font-size: 1.5rem;
+                  
+                  p {
+                    margin-bottom: 1rem;
+                  }
                 }
 
                 &.enter {
-                    animation: enterAnimation 1.5s ease forwards;
+                    animation: enterAnimation 2s ease forwards;
                 }
 
                 &.exit {
-                    animation: exitAnimation 1.5s ease forwards;
+                    animation: exitAnimation 2s ease forwards;
                 }
             }
 
