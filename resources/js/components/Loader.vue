@@ -1,7 +1,7 @@
 <template>
-  <div class="load-animation-container">
+  <div id="loader" class="load-animation-container">
     <div class="loader-object">
-      <img src="/images/svgs/3dmensional-logo.svg" alt="3dmensional logo brand svg" srcset="">
+      <img src="/images/svgs/3dmensional-logo.svg" alt="3dmensional logo brand svg" title="3dmensional logo brand svg">
       <div class="loader-glass"></div>
     </div>
   </div>
@@ -21,7 +21,7 @@ export default {
 <style lang="scss">
   // Colors
   $black: #2A2D34;
-  $gradient-bg: linear-gradient(to top right, #fff, #EAEAEA);
+  $gradient-bg: #fff;
 
   @keyframes move-glass {
     from {
@@ -40,8 +40,17 @@ export default {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: $gradient-bg;
-    z-index: 250;
+    background: $gradient-bg;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+
+    &.hide {
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
 
     .loader-object {
       color: $black;
@@ -62,7 +71,7 @@ export default {
         width: 120%;
         height: 105%;
         z-index: 300;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: $gradient-bg;
         transform: skew(-45deg) translate(-2%, 0%);
         animation-name: move-glass;
         animation-duration: 5s;

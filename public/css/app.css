@@ -10935,9 +10935,9 @@ body {
 
 body {
   overflow-x: hidden;
-  background-image: url("/images/objetivo-bg.svg"), url("/images/imaginacion-bg.svg"), url("/images/grandeza-bg.svg"), url("/images/sueños-bg.svg"), url("/images/vision-bg.svg"), url("/images/innovar-bg.svg"), url("/images/futuro-bg.svg"), url("/images/camino-bg.svg");
-  background-size: 400px auto, 500px auto, 400px auto, 400px auto, 500px auto, 400px auto, 400px auto, 400px auto;
-  background-position: 10% 32%, 90% 23%, 30% 43%, 60% 52%, 5% 60%, 95% 67%, 40% 82%, 60% 90%;
+  background-image: url("/images/objetivo-bg.svg"), url("/images/imaginacion-bg.svg"), url("/images/grandeza-bg.svg"), url("/images/sueños-bg.svg"), url("/images/vision-bg.svg"), url("/images/innovar-bg.svg"), url("/images/futuro-bg.svg"), url("/images/camino-bg.svg"), url("/images/hexagon-bg.svg"), url("/images/hexagon-bg.svg"), url("/images/hexagon-bg.svg");
+  background-size: 400px auto, 500px auto, 400px auto, 400px auto, 500px auto, 400px auto, 400px auto, 400px auto, 400px auto, 400px auto, 400px auto;
+  background-position: 10% 32%, 90% 23%, 30% 43%, 60% 52%, 5% 60%, 95% 67%, 40% 82%, 60% 90%, 15% 42%, 60% 69%, 83% 89%;
 }
 
 b,
@@ -10954,6 +10954,12 @@ section {
 @media screen and (max-width: 1279px) {
   section {
     padding: 5rem 4rem 2rem;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  section {
+    padding: 4rem 2rem 2rem;
   }
 }
 

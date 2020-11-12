@@ -27,6 +27,7 @@
 
     <main>
         <div id="app" class="content">
+            <loader-component></loader-component>
             <nav-component></nav-component>
             <home-component></home-component>
             <services-component></services-component>

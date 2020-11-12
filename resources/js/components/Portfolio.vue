@@ -10,7 +10,7 @@
       data-aos-once="false"
       data-aos-anchor-placement="top-center"
     >
-      <h2 class="section-title mb-5">ELLOS CREYERON EN NOSOTROS</h2>
+      <h2 class="section-title mb-5">ELLOS CONFIARON EN NOSOTROS</h2>
       <div class="projects-container">
         <div
           v-for="(project, ind) in projects"
@@ -136,6 +136,18 @@ export default {
         @include lt-md {
           grid-column: span 6;
         }
+        
+        @include lt-sm {
+          grid-column: span 12;
+        }
+      }
+
+      @include lt-md {
+        grid-gap: 3rem 2rem;
+      }
+      
+      @include lt-sm {
+        grid-gap: 4rem 0rem;
       }
     }
   }

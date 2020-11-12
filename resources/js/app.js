@@ -11,6 +11,17 @@
 import vuetify from "./plugins/vuetify.js"
 window.Vue = require("vue")
 
+// Loader
+document.addEventListener("readystatechange", () => {})
+
+window.onload = () => {
+  if (document.readyState === "complete") {
+    setTimeout(() => {
+      document.getElementById("loader").classList.add("hide")
+    }, 500)
+  }
+}
+
 require("./plugins.js")
 require("./admin.js")
 

@@ -95,6 +95,9 @@ export default {
     $developmentColor: #124074;
     $marketingColor: #F7B32C;
     $designColor: #9E0031;
+    $darkGray: #838f93;
+    $lightGray: #eaeaea;
+    $black: #2A2D34;
 
 
     .home-container {
@@ -128,20 +131,24 @@ export default {
               font-weight: bold;
               font-size: 1.5rem;
               margin-bottom: 2rem;
-              color: $developmentColor;
               text-align: center;
             }
 
             .info-description {
               font-size: 1.125rem;
+              color: $darkGray;
+
+              b {
+                color: #d
+              }
             }
 
             .action-btn {
               padding: 1rem;
-              border-radius: 1rem;
+              border-radius: 0.5rem;
               margin-top: 2rem;
               color: #fff;
-              background-color: $developmentColor;
+              background-color: $black;
               transition: all .5s ease;
               display: block;
               font-weight: bold;
@@ -172,7 +179,6 @@ export default {
 
                   .title {
                       text-transform: uppercase;
-                      color: $developmentColor;
                       // text-align: center;
                       font-weight: bold;
                       font-size: 3.5rem;
@@ -182,6 +188,7 @@ export default {
                     font-size: 1.5rem;
 
                     p {
+                      color: $darkGray;
                       margin-bottom: 1rem;
                       // text-align: center;
                     }
@@ -237,6 +244,7 @@ export default {
             .wrapper {
               grid-row: 2;
               height: 50%;
+              width: 100%;
 
               .slide {
                 .title {
@@ -249,6 +257,18 @@ export default {
                   text-align: center;
                 }
               }
+            }
+          }
+        }
+
+        @include lt-sm {
+          .content {
+            padding: 0;
+            padding-top: 3rem;
+
+            .info {
+              min-width: 100%;
+              height: auto;
             }
           }
         }

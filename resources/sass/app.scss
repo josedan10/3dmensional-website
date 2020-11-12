@@ -48,13 +48,19 @@ body {
                         url('/images/vision-bg.svg'),
                         url('/images/innovar-bg.svg'),
                         url('/images/futuro-bg.svg'),
-                        url('/images/camino-bg.svg');
+                        url('/images/camino-bg.svg'),
+                        url('/images/hexagon-bg.svg'),
+                        url('/images/hexagon-bg.svg'),
+                        url('/images/hexagon-bg.svg');
     
     background-size:    400px auto,
                         500px auto,
                         400px auto,
                         400px auto,
                         500px auto,
+                        400px auto,
+                        400px auto,
+                        400px auto,
                         400px auto,
                         400px auto,
                         400px auto;
@@ -66,7 +72,10 @@ body {
                             5% 60%,
                             95% 67%,
                             40% 82%,
-                            60% 90%;
+                            60% 90%,
+                            15% 42%,
+                            60% 69%,
+                            83% 89%;
 }
 
 b, strong {
@@ -83,7 +92,7 @@ section {
     }
 
     @include lt-md {
-
+        padding: 4rem 2rem 2rem;
     }
 }
 

@@ -189,12 +189,13 @@ export default {
               transition: height 0.5s ease;
 
               &.opened {
-                height: 200px;
+                height: 300px;
                 background: rgba(255, 255, 255, 1);
               }
 
               .menu-item {
                 a {
+                  font-size: 1.5rem;
                   &::after {
                     display: none;
                   }

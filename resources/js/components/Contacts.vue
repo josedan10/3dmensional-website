@@ -2,15 +2,15 @@
     <div id="contacto" class="d-flex justify-content-between container-fluid flex-wrap contact-container">
         <div class="container contact-container mt-4 d-flex flex-column justify-content-between">
             <h2 class="section-title mb-4">CONTACTO</h2>
-            <div class="mt-4 d-flex flex-row">
-                <p class="w-50"><b>CORREO</b></p>
-                <p class=""><b>TELÉFONO</b></p>
+            <div class="contact-info mt-4">
+                <p><b>CORREO</b></p>
+                <p>contacto@3dmensional.agency</p>
             </div>
-            <div class="contact-info mt-1 d-flex flex-row mb-5">
-                <p class="w-50  text-900">contacto@3dmensional.agency</p>
-                <p class=" text-900">+584241131116</p>
+            <div class="contact-info mt-4 mb-5">
+                <p><b>TELÉFONO</b></p>
+                <p>+584265361821</p>
             </div>
-            <div class="socials-container d-flex justify-content-center align-items-end h-100 mt-5">
+            <div class="socials-container d-flex justify-content-center align-items-end">
                 <div
                     v-for="(social, ind) in socialNetworks"
                     :key="ind + '-social'"

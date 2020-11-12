@@ -1,7 +1,7 @@
 <template>
     <section
         id="nosotros"
-        class="d-flex justify-content-between container-fluid all flex-wrap relative"
+        class="d-flex justify-content-between flex-wrap relative"
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay="20"
@@ -40,7 +40,9 @@
 
             </div>
 
-            <div class="pictures-container d-flex flex-row justify-content-between container mt-4">
+            <h3 class="team-title">Nuestro equipo</h3>
+
+            <div class="pictures-container d-flex flex-row container mt-4">
                 <div class="d-inline-flex picture-card flex-column text-center"
                     data-aos="fade-up"
                     data-aos-delay="150"
@@ -106,6 +108,7 @@
     </section>
 </template>
 <style scoped lang="scss">
+@import '../../sass/media-queries.scss';
     .about-container {
         max-width: 1200px;
         min-height: 100vh;
@@ -144,11 +147,20 @@
                     }
                 }
             }
+
+            @include lt-md {
+                column-count: 1;
+            }
         }
     }
 
     .pictures-container {
         flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include lt-md {
+            justify-content: space-around;
+        }
     }
 
     .picture-card {
