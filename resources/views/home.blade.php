@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     {{-- SEO --}}
@@ -20,14 +21,21 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
+    <meta http-equiv="cache-control" content="no-cache" />
+
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 
+    <div id="loader" class="load-animation-container">
+        <div class="loader-object">
+          <img src="/images/svgs/3dmensional-logo.svg" alt="3dmensional logo brand svg" title="3dmensional logo brand svg">
+          <div class="loader-glass"></div>
+        </div>
+    </div>
+
     <main>
         <div id="app" class="content">
-            <loader-component></loader-component>
             <nav-component></nav-component>
             <home-component></home-component>
             <services-component></services-component>

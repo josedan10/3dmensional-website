@@ -12,8 +12,6 @@ import vuetify from "./plugins/vuetify.js"
 window.Vue = require("vue")
 
 // Loader
-document.addEventListener("readystatechange", () => {})
-
 window.onload = () => {
   if (document.readyState === "complete") {
     setTimeout(() => {
@@ -37,7 +35,6 @@ require("./admin.js")
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component("nav-component", require("./components/Nav.vue").default)
-Vue.component("loader-component", require("./components/Loader.vue").default)
 Vue.component("home-component", require("./components/Home.vue").default)
 Vue.component(
   "services-component",
