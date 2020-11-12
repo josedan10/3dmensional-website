@@ -8,5 +8,4 @@ Vue.use(require("vue-moment"))
 Vue.use(require("svg-vue"))
 Vue.use(require("vue2-smooth-scroll"))
 
-// ..
 AOS.init()

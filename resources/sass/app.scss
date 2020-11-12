@@ -7,13 +7,27 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Media queries
+@import 'media-queries';
+
 * {
     color: #2a2d34;
     box-sizing: border-box;
 }
 
-html, body {
+html {
     font-size: 18px;
+    
+    @include lt-lg {
+        font-size: 16px;
+    }
+    
+    @include lt-md {
+        font-size: 8px;
+    }
+}
+
+html, body {
     font-weight: 300;
     width: 100vw;
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -21,9 +35,6 @@ html, body {
 
     background-color: #fff;
 
-    @media (max-width: 1200px) {
-        font-size: 16px;
-    }
 }
 
 body {
@@ -56,14 +67,6 @@ body {
                             95% 67%,
                             40% 82%,
                             60% 90%;
-
-    @media only screen and (max-width: 1200px) {
-        padding: 0 4rem;
-    }
-
-    @media only screen and (max-width: 992px) {
-
-    }
 }
 
 b, strong {
@@ -75,8 +78,16 @@ section {
     min-height: 100vh;
     position: relative;
 
-    .section-title {
-        font-size: 2.75rem;
-        font-weight: bold;
+    @include lt-lg {
+        padding: 5rem 4rem 2rem;
     }
+
+    @include lt-md {
+
+    }
+}
+
+.section-title {
+    font-size: 2.75rem;
+    font-weight: bold;
 }

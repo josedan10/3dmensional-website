@@ -11,14 +11,14 @@
       data-aos-anchor-placement="top-center"
     >
       <div class="wrapper">
-        <h1
+        <h2
           class="section-title mb-3"
-        >SERVICIOS</h1>
+        >SERVICIOS</h2>
         <div class="page-description mt-2 mb-5" v-html="description"></div>
 
-        <div class="content col-xs-12 col-12 d-flex justify-content-center align-items-center">
+        <div class="content col-xs-12 col-12 d-flex justify-content-center">
             <div class="cont-logo d-flex flex-column align-items-center">
-                <div class="logo" >
+                <div class="logo">
                     <svg class="pointer" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 189.4 215.3" style="enable-background:new 0 0 189.4 215.3;" xml:space="preserve">
                     <svg:style type="text/css">
                       .transparent{fill:transparent;}
@@ -58,7 +58,7 @@
             </div>
             <div
               class="info-card"
-              :class="{ development: selectedIndex === 0, marketing: selectedIndex === 1, design: selectedIndex === 2 }"
+              :class="classList"
             >
               <div class="area-title">{{ areas[selectedIndex] }}</div>
               <div class="description" v-html="areasContent.filter(area => area.name === areas[selectedIndex])[0].content"></div>
@@ -74,6 +74,7 @@ export default {
     color: 'blue',
     count: 1,
     selectedIndex: 0,
+    classList: ['enter', 'development'],
     areas: ['desarrollo', 'marketing', 'diseño'],
     description: '<p>Somos una <b>Agencia Digital</b> con el propósito de ofrecer soluciones innovadoras y creativas para impulsar, diseñar y construir tus sueños. Ofrecemos <b>servicios B2B, B2C</b> para proyectos, marca personal Startups, PyMEs, empresas nacionales y corporativas globales de cualquier sector.</p><p>En <b>3Dmensional</b> ponemos a tu disposición todos nuestros servicios y brindamos el mejor asesoramiento según tus necesidades.</p>',
     areasContent: [
@@ -92,20 +93,6 @@ export default {
     ]
   }),
   methods: {
-    showhide () {
-      // element = elemento que es mostrado u ocultado cuando la fucion es ejecutada
-      // show = varible de control que permite saber si se oculta o se muestra element
-      var element = document.getElementById('showed')
-      this.show = !this.show
-      if (this.show) {
-        element.classList.add('show')
-        element.classList.remove('hidden')
-      } 
-      if (!this.show) {
-        element.classList.add('hidden')
-        element.classList.remove('show')
-      }
-    },
     changeColor (count, position, positionn1, positionn2, color) {
       // count = variable que indica cual fue el svg que se hizo click (1= top, 2 = left, right = 3)
       // active = svg al que se hizo click
@@ -117,12 +104,11 @@ export default {
       // color = color del active
       // ncolor = color de nactive1 y nactive2
       var ncolor = '#eaeaea'
-      var element = document.getElementById('showed')
       var active = document.getElementById(position)
       var nactive1 = document.getElementById(positionn1)
       var nactive2 = document.getElementById(positionn2)
-      var x = 0
-      if (position == 'top') {
+
+      if (position === 'top') {
         for (const item of active.childNodes[0].childNodes) {
           if (item.nodeName !== '#text') {
             item.style.fill = color
@@ -144,7 +130,7 @@ export default {
             item.style.fill = color
           }
         }
-        if (positionn1 == 'top') {
+        if (positionn1 === 'top') {
           for (const iterator of nactive1.childNodes[0].childNodes) {
             if (iterator.nodeName !== '#text') {
               iterator.style.fill = ncolor
@@ -168,26 +154,40 @@ export default {
           }
         }
       }
+
       if (count === 1) {
         this.color = 'blue'
         this.selectedIndex = 0
-        element.classList.remove('yellow')
-        element.classList.remove('red')
-        element.classList.add('blue')
-      }
-      if (count === 2) {
+
+        // Change to execute exit animations
+        this.classList = ['exit']
+
+        // Enter animation
+        setTimeout((function () {
+          this.classList = ['enter', 'development']
+        }).bind(this), 300)
+      } else if (count === 2) {
         this.color = 'yellow'
         this.selectedIndex = 1
-        element.classList.remove('red')
-        element.classList.remove('blue')
-        element.classList.add('yellow')
-      }
-      if (count === 3) {
+
+        // Change to execute exit animations
+        this.classList = ['exit']
+
+        // Enter animation
+        setTimeout((function () {
+          this.classList = ['enter', 'marketing']
+        }).bind(this), 300)
+      } else {
         this.color = 'red'
         this.selectedIndex = 2
-        element.classList.remove('blue')
-        element.classList.remove('yellow')
-        element.classList.add('red')
+
+        // Change to execute exit animations
+        this.classList = ['exit']
+
+        // Enter animation
+        setTimeout((function () {
+          this.classList = ['enter', 'design']
+        }).bind(this), 300)
       }
     }
   },
@@ -196,6 +196,7 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '../../sass/media-queries.scss';
 
 $blue-gradient: linear-gradient(to right, #124074,#0C2B4E);
 $yellow-gradient: linear-gradient(to right, #F7B32C,#D19725);
@@ -238,12 +239,21 @@ $designColor: #9E0031;
     .content {
       position: relative;
       z-index: 2;
+
+      @include lt-md {
+        flex-direction: column;
+
+        .cont-logo {
+          max-width: 200px;
+          margin: 0 auto;
+        }
+      }
     }
   }
 
   .page-description {
     font-size: 1.125rem;
-                  
+
     p {
       margin-bottom: 1rem;
     }
@@ -259,31 +269,36 @@ $designColor: #9E0031;
 .logo {
   width: 100%;
 }
-    .cont-logo, .cont-figure{
+    .cont-logo, .cont-figure {
       min-width: 300px;
       margin-right: 100px;
       z-index: 1;
 
-        .head{
+        .head {
             height:50px;
             margin-top: 20px;
+
             img{
                 width: auto;
                 height:100%;
             }
         }
-        .content{
-            height: auto;
-            width: 100%;
-            svg{
-                height:13em;
-            }
+
+        .content {
+          height: auto;
+          width: 100%;
+
+          svg {
+              height: 13em;
+          }
         }
+
         .foot{
             height: 50px;
             width: 100%;
             margin-bottom: 20px;
             position: relative;
+
             img{
                 height: 2em;
                 width: auto;
@@ -337,18 +352,25 @@ $designColor: #9E0031;
         }
     }
 
+    @keyframes fadeAnimation {
+      from {
+        opacity: 0%;
+      } to {
+        opacity: 100%;
+      }
+    }
+
     //  Content card
     .info-card {
+      // box-shadow: 0 10px 10px rgb(42, 45, 52, 0.3);
+      // height: 300px;
+      // overflow-y: auto;
+      // padding: 2rem;
       border-radius: 1rem;
-      box-shadow: 0 10px 10px rgb(42, 45, 52, 0.3);
-      height: 300px;
       width: 70%;
       max-width: 700px;
-      overflow-y: auto;
-      padding: 2rem;
       position: relative;
       z-index: 2;
-      background-color: #fff;
 
       .area-title {
         font-weight: bold;
@@ -404,6 +426,20 @@ $designColor: #9E0031;
             background-color: $marketingColor;
           }
         }
+      }
+
+      &.enter {
+        animation: fadeAnimation .5s ease forwards;
+      }
+
+      &.exit {
+        animation: fadeAnimation .3s ease forwards reverse;
+      }
+
+      @include lt-md {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 100%;
       }
     }
 

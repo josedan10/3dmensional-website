@@ -13,7 +13,7 @@
         <div class="container about-container mt-5 mb-4 d-flex flex-column relative">
             <div class="d-flex flex-row justify-content-between">
                 <div class="w-50">
-                    <h1 class="section-title mb-3">SOBRE NOSOTROS</h1>
+                    <h2 class="section-title mb-3">SOBRE NOSOTROS</h2>
                 </div>
             </div>
 
@@ -22,7 +22,7 @@
                 <p class="parraf ">Cada proyecto en el que podemos trabajar es una oportunidad para hacer algo diferente. Creemos que <b>cada idea es importante</b>, es por eso que nuestro propósito es brindarle una <b>atención completamente personalizada</b> que lo guíe en el desarrollo que proyecta a corto, mediano y largo plazo.</p>
                 <p class="parraf ">Nuestro entorno de trabajo lo hemos dividido en tres dimensiones principales:</p>
 
-                <img src="/images/svgs/3Dmensional-dimensions.svg" alt="3Dmensional services, marketing, desarrollo, diseño. Agencia de marketing profesional" title="3Dmensional services"/>
+                <img src="/images/svgs/3Dmensional-dimensions.svg" alt="3Dmensional services, marketing, desarrollo, diseño. Agencia de marketing digital" title="3Dmensional services"/>
 
                 <p class="parraf ">En cada uno de estos servicios <b>contamos con un equipo capacitado y dedicado</b>, cuyo objetivo es ofrecerle el mejor asesoramiento y atención para que su proyecto pueda llevarse acabo. <b>Siempre damos una milla extra</b> a fin de poder incluso superar las expectativas de nuestros clientes.</p>
                 <p class="parraf ">No vemos un proyecto como un trabajo sino como una oportunidad para <b>crear arte con nuestros talentos, porque nos apasiona lo que hacemos</b>.</p>
@@ -51,7 +51,7 @@
                     data-aos-anchor-placement="top-center"
                 >
                     <div class="mt-2 mx-4 text-center relative">
-                        <b-img-lazy blank="true" blankColor="#eaeaea" class="profile-picture" src="/images/picture-1.png" title="Director de Marketing" alt="3Dmensional Director de Marketing, Douglas López"></b-img-lazy>
+                        <b-img-lazy blank="true" blankColor="#eaeaea" class="profile-picture" src="/images/edgardo-profile.jpg" title="Director de Marketing" alt="3Dmensional Director de Marketing, Edgardo López"></b-img-lazy>
                     </div>
                     <p class="name">EDGARDO LÓPEZ</p>
                     <p class="parraf">Director de Marketing</p>

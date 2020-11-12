@@ -10,7 +10,7 @@
       data-aos-once="false"
       data-aos-anchor-placement="top-center"
     >
-      <h1 class="section-title mb-5">ELLOS CREYERON EN NOSOTROS</h1>
+      <h2 class="section-title mb-5">ELLOS CREYERON EN NOSOTROS</h2>
       <div class="projects-container">
         <div
           v-for="(project, ind) in projects"
@@ -108,6 +108,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../sass/media-queries.scss';
 
   .portfolio {
     display: flex;
@@ -130,6 +131,10 @@ export default {
         .project-img {
           width: 100%;
           // filter: grayscale(100%);
+        }
+
+        @include lt-md {
+          grid-column: span 6;
         }
       }
     }

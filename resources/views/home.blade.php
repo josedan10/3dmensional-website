@@ -13,7 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     {{-- SEO --}}
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     @include('includes.meta-seo')
 
     <!-- Fonts -->

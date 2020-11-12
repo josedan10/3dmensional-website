@@ -1,8 +1,7 @@
 <template>
     <div id="contacto" class="d-flex justify-content-between container-fluid flex-wrap contact-container">
-        <div class="header mb-5"></div>
-        <div class="container socials-container mt-4 d-flex flex-column justify-content-between">
-            <h1 class="section-title mb-4">CONTACTO</h1>
+        <div class="container contact-container mt-4 d-flex flex-column justify-content-between">
+            <h2 class="section-title mb-4">CONTACTO</h2>
             <div class="mt-4 d-flex flex-row">
                 <p class="w-50"><b>CORREO</b></p>
                 <p class=""><b>TELÉFONO</b></p>
@@ -11,19 +10,17 @@
                 <p class="w-50  text-900">contacto@3dmensional.agency</p>
                 <p class=" text-900">+584241131116</p>
             </div>
-            <div class="d-flex flex-row justify-content-center align-items-end h-100 mt-5">
+            <div class="socials-container d-flex justify-content-center align-items-end h-100 mt-5">
                 <div
                     v-for="(social, ind) in socialNetworks"
                     :key="ind + '-social'"
                     class="rrss"
                     :class="social.name + '-container'"
                 >
-                    <div class="w-100 h-100 d-flex flex-column justify-content-around align-items-center" >
-                        <a :href="social.url" target="_blank">
-                            <svg-vue class="icon" :icon="social.name"></svg-vue>
-                            <p class="text-light">{{ social.username.toUpperCase() }}</p>
-                        </a>
-                    </div>
+                    <a :href="social.url" target="_blank">
+                        <svg-vue class="icon" :icon="social.name"></svg-vue>
+                        <p class="text-light">{{ social.username.toUpperCase() }}</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -73,16 +70,12 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '../../sass/media-queries.scss';
 
     $facebook: #0071BC;
     $instagram: #EE4B7A;
     $telegram: #1fa5fd;
     $whatsapp: #5EFA75;
-    .header {
-        height:50px;
-        width: 100%;
-        margin-top: 20px;
-    }
 
     .contact-info {
         font-size: 1.25rem;
@@ -96,56 +89,103 @@ export default {
             right: -240px;
             bottom: 50px;
         }
+
+        @include lt-md {
+            min-height: 500px;
+            justify-content: flex-end !important;
+        }
     }
 
     p{
         margin: 0;
     }
 
-    .socials-container {
+    .contact-container {
         padding-bottom: 0;
         max-width: 1200px;
         position: relative;
     }
 
-    .rrss {
-        height: 320px;
-        width: 25%;
-        background: #2A2D34;
-        border-radius: 10px 10px 0px 0px;
-        transition: all 0.2s ease;
-        z-index: 2;
-        transform-origin: bottom;
+    .socials-container {
 
-        .d-flex {
-            transition: all 0.2s ease;
-        }
-
-        a {
+        .rrss {
             display: flex;
             justify-content: center;
-            flex-direction: column;
             align-items: center;
-        }
-
-        .icon {
-            height: 60px;
-            margin-bottom: 2rem;
-        }
-
-        &:hover {
-            cursor: pointer;
-            transform: scale(1,1.2);
-            transition: all 0.2s ease;
+            height: 320px;
+            width: 25%;
+            background: #2A2D34;
             border-radius: 10px 10px 0px 0px;
+            transition: all 0.2s ease;
+            z-index: 2;
+            transform-origin: bottom;
 
-            .icon, .text-light {
-                transform: scale(1,calc(1/1.2));
+            a {
+                transition: all 0.2s ease;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
             }
 
-            path, circle {
-                fill: white;
+            .icon {
+                height: 60px;
+                margin-bottom: 2rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1,1.2);
                 transition: all 0.2s ease;
+
+                .icon, .text-light {
+                    transform: scale(1,calc(1/1.2));
+                }
+
+                path, circle {
+                    fill: white;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+
+        @include lt-md {
+            position: absolute;
+            right: -15px;
+            bottom: 2rem;
+            flex-direction: column;
+
+            .rrss {
+                width: 100%;
+                height: 120px;
+                border-radius: 10px 0px 0px 10px;
+                justify-content: flex-start;
+                transform: translateX(216px);
+                margin-top: 1rem;
+
+                a {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-left: 2rem;
+                    padding-right: 1rem;
+                    
+                    .icon {
+                        height: 40px;
+                        margin-bottom: 0;
+                        margin-right: 50px;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transform: translateX(0px);
+
+                    .icon, .text-light {
+                        transform: none;
+                    }
+                }
             }
         }
     }
